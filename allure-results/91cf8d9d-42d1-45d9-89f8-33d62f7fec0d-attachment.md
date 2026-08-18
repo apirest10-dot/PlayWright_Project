@@ -1,0 +1,77 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Annotations.spec.ts >> Invalid Login
+- Location: tests\Annotations.spec.ts:8:6
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /dashboard/
+Received string:  "http://orangehrm.qedgetech.com/symfony/web/index.php/auth/validateCredentials"
+Timeout: 20000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 20000ms
+    43 × unexpected value "http://orangehrm.qedgetech.com/symfony/web/index.php/auth/validateCredentials"
+
+```
+
+```yaml
+- textbox
+- img
+- img
+- text: LOGIN Panel
+- textbox
+- text: Username
+- textbox
+- text: Password
+- button "LOGIN"
+- text: Invalid credentials
+- link "Forgot your password?":
+  - /url: /symfony/web/index.php/auth/requestPasswordResetCode
+- text: OrangeHRM 4.10.1 © 2005 - 2026
+- link "OrangeHRM, Inc":
+  - /url: http://www.orangehrm.com
+- text: . All rights reserved.
+- link "LinkedIn OrangeHRM group":
+  - /url: http://www.linkedin.com/groups?home=&gid=891077
+  - img "LinkedIn OrangeHRM group"
+- link "OrangeHRM on Facebook":
+  - /url: http://www.facebook.com/OrangeHRM
+  - img "OrangeHRM on Facebook"
+- link "OrangeHRM on twitter":
+  - /url: http://twitter.com/orangehrm
+  - img "OrangeHRM on twitter"
+- link "OrangeHRM on youtube":
+  - /url: http://www.youtube.com/orangehrm
+  - img "OrangeHRM on youtube"
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | test.skip('Verify Forgot Password', async ({ page }) => {
+  3  | await page.goto('http://orangehrm.qedgetech.com/');
+  4  | await page.click('text=Forgot your password?');
+  5  | });
+  6  | 
+  7  | 
+  8  | test.fail('Invalid Login', async ({ page }) => {
+  9  | await page.goto('http://orangehrm.qedgetech.com/');
+  10 | await page.locator('#txtUsername').fill('Admin');
+  11 | await page.locator('#txtPassword').fill('WrongPassword');
+  12 | await page.locator('#btnLogin').click();
+> 13 | await expect(page).toHaveURL(/dashboard/);
+     |                    ^ Error: expect(page).toHaveURL(expected) failed
+  14 | });
+  15 | 
+```

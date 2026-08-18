@@ -1,0 +1,2 @@
+No of items 4
+[ 'Green', 'Blue', 'Black', 'Red' ]

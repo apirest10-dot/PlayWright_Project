@@ -1,0 +1,343 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: dragdrop.spec.ts >> Handling Drag and Drop
+- Location: tests\dragdrop.spec.ts:2:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - generic:
+        - list [ref=e5]:
+          - listitem [ref=e6] [cursor=pointer]:
+            - link "jQuery" [ref=e7]:
+              - /url: https://jquery.com/
+          - listitem [ref=e8] [cursor=pointer]:
+            - link "jQuery UI" [ref=e9]:
+              - /url: https://jqueryui.com/
+          - listitem [ref=e10] [cursor=pointer]:
+            - link "jQuery Mobile" [ref=e11]:
+              - /url: https://jquerymobile.com/
+          - listitem [ref=e12] [cursor=pointer]:
+            - link "Sizzle" [ref=e13]:
+              - /url: https://sizzlejs.com/
+          - listitem [ref=e14] [cursor=pointer]:
+            - link "QUnit" [ref=e15]:
+              - /url: https://qunitjs.com/
+        - list [ref=e16]:
+          - listitem [ref=e17] [cursor=pointer]:
+            - link "Plugins" [ref=e18]:
+              - /url: https://plugins.jquery.com/
+          - listitem [ref=e19] [cursor=pointer]:
+            - link "Contribute" [ref=e20]:
+              - /url: https://contribute.jquery.org/
+          - listitem [ref=e21] [cursor=pointer]:
+            - link "Events" [ref=e22]:
+              - /url: https://events.jquery.org/
+          - listitem [ref=e23] [cursor=pointer]:
+            - link "Support" [ref=e24]:
+              - /url: https://jquery.com/support/
+          - listitem [ref=e25] [cursor=pointer]:
+            - link "OpenJS Foundation" [ref=e26]:
+              - /url: https://openjsf.org/
+  - generic [ref=e27]:
+    - heading "jQuery UI" [level=2] [ref=e29]:
+      - link "jQuery UI" [ref=e30] [cursor=pointer]:
+        - /url: /
+    - navigation [ref=e31]:
+      - menu "Navigation" [ref=e32]:
+        - listitem [ref=e33]:
+          - link "Demos" [ref=e34] [cursor=pointer]:
+            - /url: https://jqueryui.com/demos/
+        - listitem [ref=e35]:
+          - link "Download" [ref=e36] [cursor=pointer]:
+            - /url: https://jqueryui.com/download/
+        - listitem [ref=e37]:
+          - link "API Documentation" [ref=e38] [cursor=pointer]:
+            - /url: https://api.jqueryui.com/
+        - listitem [ref=e39]:
+          - link "Themes" [ref=e40] [cursor=pointer]:
+            - /url: https://jqueryui.com/themeroller/
+        - listitem [ref=e41]:
+          - link "Development" [ref=e42] [cursor=pointer]:
+            - /url: https://jqueryui.com/development/
+        - listitem [ref=e43]:
+          - link "Support" [ref=e44] [cursor=pointer]:
+            - /url: https://jqueryui.com/support/
+        - listitem [ref=e45]:
+          - link "Blog" [ref=e46] [cursor=pointer]:
+            - /url: https://blog.jqueryui.com/
+        - listitem [ref=e47]:
+          - link "About" [ref=e48] [cursor=pointer]:
+            - /url: https://jqueryui.com/about/
+      - search [ref=e49]:
+        - searchbox "Search jQuery UI" [ref=e50]
+        - button [ref=e51] [cursor=pointer]
+        - text: /
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - heading "Droppable" [level=1] [ref=e55]
+        - separator [ref=e56]
+        - paragraph [ref=e57]: Create targets for draggable elements.
+        - generic [ref=e58]:
+          - heading "Examples" [level=2] [ref=e59]
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "Default functionality" [ref=e62] [cursor=pointer]:
+                - /url: /resources/demos/droppable/default.html
+            - listitem [ref=e63]:
+              - link "Accept" [ref=e64] [cursor=pointer]:
+                - /url: /resources/demos/droppable/accepted-elements.html
+            - listitem [ref=e65]:
+              - link "Prevent propagation" [ref=e66] [cursor=pointer]:
+                - /url: /resources/demos/droppable/propagation.html
+            - listitem [ref=e67]:
+              - link "Revert draggable position" [ref=e68] [cursor=pointer]:
+                - /url: /resources/demos/droppable/revert.html
+            - listitem [ref=e69]:
+              - link "Simple photo manager" [ref=e70] [cursor=pointer]:
+                - /url: /resources/demos/droppable/photo-manager.html
+            - listitem [ref=e71]:
+              - link "Visual feedback" [ref=e72] [cursor=pointer]:
+                - /url: /resources/demos/droppable/visual-feedback.html
+        - iframe [ref=e73]:
+          - generic [active]:
+            - paragraph [ref=f1e2]: Drag me to my target
+            - paragraph [ref=f1e4]: Drop here
+        - paragraph [ref=e75]: Enable any DOM element to be droppable, a target for draggable elements.
+        - generic [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: 
+          - text: view source
+        - paragraph [ref=e79]:
+          - text: Want to learn more about the droppable interaction? Check out the
+          - link "API documentation" [ref=e80] [cursor=pointer]:
+            - /url: https://api.jqueryui.com/droppable/
+          - text: .
+      - complementary [ref=e81]:
+        - complementary [ref=e82]:
+          - heading "Interactions" [level=3] [ref=e83]
+          - list [ref=e84]:
+            - listitem [ref=e85]:
+              - link "Draggable" [ref=e86] [cursor=pointer]:
+                - /url: https://jqueryui.com/draggable/
+            - listitem [ref=e87]:
+              - link "Droppable" [ref=e88] [cursor=pointer]:
+                - /url: https://jqueryui.com/droppable/
+            - listitem [ref=e89]:
+              - link "Resizable" [ref=e90] [cursor=pointer]:
+                - /url: https://jqueryui.com/resizable/
+            - listitem [ref=e91]:
+              - link "Selectable" [ref=e92] [cursor=pointer]:
+                - /url: https://jqueryui.com/selectable/
+            - listitem [ref=e93]:
+              - link "Sortable" [ref=e94] [cursor=pointer]:
+                - /url: https://jqueryui.com/sortable/
+        - complementary [ref=e95]:
+          - heading "Widgets" [level=3] [ref=e96]
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - link "Accordion" [ref=e99] [cursor=pointer]:
+                - /url: https://jqueryui.com/accordion/
+            - listitem [ref=e100]:
+              - link "Autocomplete" [ref=e101] [cursor=pointer]:
+                - /url: https://jqueryui.com/autocomplete/
+            - listitem [ref=e102]:
+              - link "Button" [ref=e103] [cursor=pointer]:
+                - /url: https://jqueryui.com/button/
+            - listitem [ref=e104]:
+              - link "Checkboxradio" [ref=e105] [cursor=pointer]:
+                - /url: https://jqueryui.com/checkboxradio/
+            - listitem [ref=e106]:
+              - link "Controlgroup" [ref=e107] [cursor=pointer]:
+                - /url: https://jqueryui.com/controlgroup/
+            - listitem [ref=e108]:
+              - link "Datepicker" [ref=e109] [cursor=pointer]:
+                - /url: https://jqueryui.com/datepicker/
+            - listitem [ref=e110]:
+              - link "Dialog" [ref=e111] [cursor=pointer]:
+                - /url: https://jqueryui.com/dialog/
+            - listitem [ref=e112]:
+              - link "Menu" [ref=e113] [cursor=pointer]:
+                - /url: https://jqueryui.com/menu/
+            - listitem [ref=e114]:
+              - link "Progressbar" [ref=e115] [cursor=pointer]:
+                - /url: https://jqueryui.com/progressbar/
+            - listitem [ref=e116]:
+              - link "Selectmenu" [ref=e117] [cursor=pointer]:
+                - /url: https://jqueryui.com/selectmenu/
+            - listitem [ref=e118]:
+              - link "Slider" [ref=e119] [cursor=pointer]:
+                - /url: https://jqueryui.com/slider/
+            - listitem [ref=e120]:
+              - link "Spinner" [ref=e121] [cursor=pointer]:
+                - /url: https://jqueryui.com/spinner/
+            - listitem [ref=e122]:
+              - link "Tabs" [ref=e123] [cursor=pointer]:
+                - /url: https://jqueryui.com/tabs/
+            - listitem [ref=e124]:
+              - link "Tooltip" [ref=e125] [cursor=pointer]:
+                - /url: https://jqueryui.com/tooltip/
+        - complementary [ref=e126]:
+          - heading "Effects" [level=3] [ref=e127]
+          - list [ref=e128]:
+            - listitem [ref=e129]:
+              - link "Add Class" [ref=e130] [cursor=pointer]:
+                - /url: https://jqueryui.com/addClass/
+            - listitem [ref=e131]:
+              - link "Color Animation" [ref=e132] [cursor=pointer]:
+                - /url: https://jqueryui.com/animate/
+            - listitem [ref=e133]:
+              - link "Easing" [ref=e134] [cursor=pointer]:
+                - /url: https://jqueryui.com/easing/
+            - listitem [ref=e135]:
+              - link "Effect" [ref=e136] [cursor=pointer]:
+                - /url: https://jqueryui.com/effect/
+            - listitem [ref=e137]:
+              - link "Hide" [ref=e138] [cursor=pointer]:
+                - /url: https://jqueryui.com/hide/
+            - listitem [ref=e139]:
+              - link "Remove Class" [ref=e140] [cursor=pointer]:
+                - /url: https://jqueryui.com/removeClass/
+            - listitem [ref=e141]:
+              - link "Show" [ref=e142] [cursor=pointer]:
+                - /url: https://jqueryui.com/show/
+            - listitem [ref=e143]:
+              - link "Switch Class" [ref=e144] [cursor=pointer]:
+                - /url: https://jqueryui.com/switchClass/
+            - listitem [ref=e145]:
+              - link "Toggle" [ref=e146] [cursor=pointer]:
+                - /url: https://jqueryui.com/toggle/
+            - listitem [ref=e147]:
+              - link "Toggle Class" [ref=e148] [cursor=pointer]:
+                - /url: https://jqueryui.com/toggleClass/
+        - complementary [ref=e149]:
+          - heading "Utilities" [level=3] [ref=e150]
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - link "Position" [ref=e153] [cursor=pointer]:
+                - /url: https://jqueryui.com/position/
+            - listitem [ref=e154]:
+              - link "Widget Factory" [ref=e155] [cursor=pointer]:
+                - /url: https://jqueryui.com/widget/
+        - complementary [ref=e156]:
+          - heading "Meta" [level=3] [ref=e157]
+          - list [ref=e158]:
+            - listitem [ref=e159]:
+              - link "About jQuery UI" [ref=e160] [cursor=pointer]:
+                - /url: https://jqueryui.com/about/
+            - listitem [ref=e161]:
+              - link "Browser Support" [ref=e162] [cursor=pointer]:
+                - /url: https://jqueryui.com/browser-support/
+            - listitem [ref=e163]:
+              - link "Development Center" [ref=e164] [cursor=pointer]:
+                - /url: https://jqueryui.com/development/
+            - listitem [ref=e165]:
+              - link "jQuery UI Changelogs" [ref=e166] [cursor=pointer]:
+                - /url: https://jqueryui.com/changelog/
+            - listitem [ref=e167]:
+              - link "jQuery UI Upgrade Guides" [ref=e168] [cursor=pointer]:
+                - /url: https://jqueryui.com/upgrade-guide/
+            - listitem [ref=e169]:
+              - link "Support Center" [ref=e170] [cursor=pointer]:
+                - /url: https://jqueryui.com/support/
+  - contentinfo [ref=e171]:
+    - generic [ref=e172]:
+      - generic [ref=e174]:
+        - heading "Books" [level=3] [ref=e175]:
+          - generic [ref=e176]: Books
+        - list [ref=e177]:
+          - listitem [ref=e178]:
+            - link "jQuery UI in Action by TJ VanToll jQuery UI in Action TJ VanToll" [ref=e179] [cursor=pointer]:
+              - /url: https://www.manning.com/books/jquery-ui-in-action
+              - img "jQuery UI in Action by TJ VanToll" [ref=e181]
+              - strong [ref=e182]: jQuery UI in Action
+              - generic [ref=e183]: TJ VanToll
+          - listitem [ref=e184]:
+            - link "jQuery UI Themes by Adam Boduch jQuery UI Themes Adam Boduch" [ref=e185] [cursor=pointer]:
+              - /url: https://www.packtpub.com/web-development/jquery-ui-themes-beginners-guide
+              - img "jQuery UI Themes by Adam Boduch" [ref=e186]
+              - text: jQuery UI Themes
+              - generic [ref=e187]: Adam Boduch
+          - listitem [ref=e188]:
+            - link "jQuery UI Cookbook by Adam Boduch jQuery UI Cookbook Adam Boduch" [ref=e189] [cursor=pointer]:
+              - /url: https://www.packtpub.com/web-development/jquery-ui-cookbook
+              - img "jQuery UI Cookbook by Adam Boduch" [ref=e190]
+              - text: jQuery UI Cookbook
+              - generic [ref=e191]: Adam Boduch
+      - generic [ref=e192]:
+        - list [ref=e193]:
+          - listitem [ref=e194]:
+            - link " Learning Center" [ref=e195] [cursor=pointer]:
+              - /url: https://learn.jquery.com/
+          - listitem [ref=e196]:
+            - link " Chat" [ref=e197] [cursor=pointer]:
+              - /url: https://jquery.com/support/
+          - listitem [ref=e198]:
+            - link " Twitter" [ref=e199] [cursor=pointer]:
+              - /url: https://twitter.com/jqueryui
+          - listitem [ref=e200]:
+            - link " GitHub" [ref=e201] [cursor=pointer]:
+              - /url: https://github.com/jquery
+        - paragraph [ref=e202]:
+          - text: Copyright 2026
+          - link "OpenJS Foundation" [ref=e203] [cursor=pointer]:
+            - /url: https://openjsf.org/
+          - text: and jQuery contributors. All rights reserved. See
+          - link "jQuery License" [ref=e204] [cursor=pointer]:
+            - /url: https://jquery.com/license/
+          - text: for more information. The
+          - link "OpenJS Foundation" [ref=e205] [cursor=pointer]:
+            - /url: https://openjsf.org/
+          - text: has registered trademarks and uses trademarks. For a list of trademarks of the
+          - link "OpenJS Foundation" [ref=e206] [cursor=pointer]:
+            - /url: https://openjsf.org/
+          - text: ", please see our"
+          - link "Trademark Policy" [ref=e207] [cursor=pointer]:
+            - /url: https://trademark-policy.openjsf.org/
+          - text: and
+          - link "Trademark List" [ref=e208] [cursor=pointer]:
+            - /url: https://trademark-list.openjsf.org/
+          - text: . Trademarks and logos not indicated on the
+          - link "list of OpenJS Foundation trademarks" [ref=e209] [cursor=pointer]:
+            - /url: https://trademark-list.openjsf.org/
+          - text: are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them. OpenJS Foundation
+          - link "Terms of Use" [ref=e210] [cursor=pointer]:
+            - /url: https://terms-of-use.openjsf.org/
+          - text: ","
+          - link "Privacy" [ref=e211] [cursor=pointer]:
+            - /url: https://privacy-policy.openjsf.org/
+          - text: ","
+          - link "Code of Conduct" [ref=e212] [cursor=pointer]:
+            - /url: https://code-of-conduct.openjsf.org/
+          - text: ", and"
+          - link "Cookie" [ref=e213] [cursor=pointer]:
+            - /url: https://www.linuxfoundation.org/cookies
+          - text: Policies also apply.
+        - paragraph [ref=e214]:
+          - link "Web hosting by Digital Ocean" [ref=e215] [cursor=pointer]:
+            - /url: https://www.digitalocean.com/?refcode=aa1a2e950a73&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge
+          - text: "|"
+          - link "CDN by Fastly" [ref=e216] [cursor=pointer]:
+            - /url: https://www.fastly.com/
+          - text: "|"
+          - link "Powered by WordPress" [ref=e217] [cursor=pointer]:
+            - /url: https://wordpress.org/
+```

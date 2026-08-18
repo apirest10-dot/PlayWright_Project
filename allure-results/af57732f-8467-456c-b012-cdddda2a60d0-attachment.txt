@@ -1,0 +1,3 @@
+confirm
+I am a JS Confirm
+You clicked: Cancel

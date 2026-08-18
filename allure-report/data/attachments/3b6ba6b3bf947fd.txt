@@ -1,0 +1,7 @@
+no of rows are 6
+No of cells in each row 1: 3
+No of cells in each row 2: 3
+No of cells in each row 3: 3
+No of cells in each row 4: 3
+No of cells in each row 5: 3
+No of cells in each row 6: 3

@@ -1,0 +1,968 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: HandlingTable1.spec.ts >> Handling table data
+- Location: tests\HandlingTable1.spec.ts:3:5
+
+# Error details
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]:
+      - link "Home link" [ref=e3] [cursor=pointer]:
+        - /url: https://www.w3schools.com
+        - generic [ref=e4]: 
+      - navigation [ref=e5]:
+        - button "Tutorials" [ref=e6] [cursor=pointer]:
+          - text: Tutorials
+          - generic [ref=e7]: 
+          - text: 
+        - button "References" [ref=e8] [cursor=pointer]:
+          - text: References
+          - generic [ref=e9]: 
+          - text: 
+        - button "Exercises" [ref=e10] [cursor=pointer]:
+          - text: Exercises
+          - generic [ref=e11]: 
+          - text: 
+        - button "Certificates" [ref=e12] [cursor=pointer]:
+          - text: Certificates
+          - generic [ref=e13]: 
+          - text: 
+      - text:  
+      - generic [ref=e15]:
+        - generic [ref=e16]: Search field
+        - textbox "Search field" [ref=e17]:
+          - /placeholder: Search...
+        - button "Button to search" [ref=e18] [cursor=pointer]:
+          - img [ref=e19]
+      - button "All our services" [ref=e22] [cursor=pointer]:
+        - img [ref=e23]
+      - generic [ref=e25]:
+        - button "Sign in to your account" [ref=e26] [cursor=pointer]: Sign In
+        - link "W3Schools Certificates" [ref=e27] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/course-catalog
+          - text: Get Certified
+        - link "Become a PLUS user and unlock powerful features" [ref=e28] [cursor=pointer]:
+          - /url: https://order.w3schools.com/plans
+          - text: Upgrade
+        - link "Contact us about W3Schools Academy for educational institutions" [ref=e29] [cursor=pointer]:
+          - /url: /academy/index.php
+          - text: Academy
+        - link "Get Your Own Website With W3Schools Spaces" [ref=e30] [cursor=pointer]:
+          - /url: /spaces/index.php
+          - text: Spaces
+        - link "W3Schools Practice Coding Problems" [ref=e31] [cursor=pointer]:
+          - /url: /practice/index.php
+          - text: Practice
+    - text:      
+    - generic:
+      - generic: Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate 
+  - generic [ref=e35]:
+    - generic [ref=e36] [cursor=pointer]: ❯
+    - generic:
+      - generic: 
+    - link "HTML" [ref=e37] [cursor=pointer]:
+      - /url: /html/default.asp
+    - link "CSS" [ref=e38] [cursor=pointer]:
+      - /url: /css/default.asp
+    - link "JAVASCRIPT" [ref=e39] [cursor=pointer]:
+      - /url: /js/default.asp
+    - link "SQL" [ref=e40] [cursor=pointer]:
+      - /url: /sql/default.asp
+    - link "PYTHON" [ref=e41] [cursor=pointer]:
+      - /url: /python/default.asp
+    - link "JAVA" [ref=e42] [cursor=pointer]:
+      - /url: /java/default.asp
+    - link "PHP" [ref=e43] [cursor=pointer]:
+      - /url: /php/default.asp
+    - link "W3.CSS" [ref=e44] [cursor=pointer]:
+      - /url: /w3css/default.asp
+    - link "C" [ref=e45] [cursor=pointer]:
+      - /url: /c/index.php
+    - link "C++" [ref=e46] [cursor=pointer]:
+      - /url: /cpp/default.asp
+    - link "C#" [ref=e47] [cursor=pointer]:
+      - /url: /cs/index.php
+    - link "HOW TO" [ref=e48] [cursor=pointer]:
+      - /url: /howto/default.asp
+    - link "BOOTSTRAP" [ref=e49] [cursor=pointer]:
+      - /url: /bootstrap/bootstrap_ver.asp
+    - link "REACT" [ref=e50] [cursor=pointer]:
+      - /url: /react/default.asp
+    - link "MYSQL" [ref=e51] [cursor=pointer]:
+      - /url: /mysql/default.asp
+    - link "JQUERY" [ref=e52] [cursor=pointer]:
+      - /url: /jquery/default.asp
+    - link "EXCEL" [ref=e53] [cursor=pointer]:
+      - /url: /excel/index.php
+    - link "XML" [ref=e54] [cursor=pointer]:
+      - /url: /xml/default.asp
+    - link "DJANGO" [ref=e55] [cursor=pointer]:
+      - /url: /django/index.php
+    - link "NUMPY" [ref=e56] [cursor=pointer]:
+      - /url: /python/numpy/default.asp
+    - link "PANDAS" [ref=e57] [cursor=pointer]:
+      - /url: /python/pandas/default.asp
+    - link "NODEJS" [ref=e58] [cursor=pointer]:
+      - /url: /nodejs/default.asp
+    - link "DSA" [ref=e59] [cursor=pointer]:
+      - /url: /dsa/index.php
+    - link "TYPESCRIPT" [ref=e60] [cursor=pointer]:
+      - /url: /typescript/index.php
+    - link "ANGULAR" [ref=e61] [cursor=pointer]:
+      - /url: /angular/default.asp
+    - link "ANGULARJS" [ref=e62] [cursor=pointer]:
+      - /url: /angularjs/default.asp
+    - link "GIT" [ref=e63] [cursor=pointer]:
+      - /url: /git/default.asp
+    - link "POSTGRESQL" [ref=e64] [cursor=pointer]:
+      - /url: /postgresql/index.php
+    - link "MONGODB" [ref=e65] [cursor=pointer]:
+      - /url: /mongodb/index.php
+    - link "ASP" [ref=e66] [cursor=pointer]:
+      - /url: /asp/default.asp
+    - link "AI" [ref=e67] [cursor=pointer]:
+      - /url: /ai/default.asp
+    - link "R" [ref=e68] [cursor=pointer]:
+      - /url: /r/default.asp
+    - link "GO" [ref=e69] [cursor=pointer]:
+      - /url: /go/index.php
+    - link "KOTLIN" [ref=e70] [cursor=pointer]:
+      - /url: /kotlin/index.php
+    - link "SWIFT" [ref=e71] [cursor=pointer]:
+      - /url: /swift/default.asp
+    - link "SASS" [ref=e72] [cursor=pointer]:
+      - /url: /sass/default.asp
+    - link "VUE" [ref=e73] [cursor=pointer]:
+      - /url: /vue/index.php
+    - link "GEN AI" [ref=e74] [cursor=pointer]:
+      - /url: /gen_ai/index.php
+    - link "SCIPY" [ref=e75] [cursor=pointer]:
+      - /url: /python/scipy/index.php
+    - link "AWS" [ref=e76] [cursor=pointer]:
+      - /url: /aws/index.php
+    - link "CYBERSECURITY" [ref=e77] [cursor=pointer]:
+      - /url: /cybersecurity/index.php
+    - link "DATA SCIENCE" [ref=e78] [cursor=pointer]:
+      - /url: /datascience/default.asp
+    - link "INTRO TO PROGRAMMING" [ref=e79] [cursor=pointer]:
+      - /url: /programming/index.php
+    - link "INTRO TO HTML & CSS" [ref=e80] [cursor=pointer]:
+      - /url: /htmlcss/default.asp
+    - link "BASH" [ref=e81] [cursor=pointer]:
+      - /url: /bash/index.php
+    - link "RUST" [ref=e82] [cursor=pointer]:
+      - /url: /rust/index.php
+    - link "TOOLS" [ref=e83] [cursor=pointer]:
+      - /url: /tools/index.php
+  - generic [ref=e85]:
+    - generic [ref=e88]:
+      - heading "HTML Tutorial" [level=2] [ref=e89]
+      - link "HTML HOME" [ref=e90] [cursor=pointer]:
+        - /url: default.asp
+      - link "HTML Introduction " [ref=e91] [cursor=pointer]:
+        - /url: html_intro.asp
+        - text: HTML Introduction
+        - generic: 
+      - link "HTML Editors" [ref=e92] [cursor=pointer]:
+        - /url: html_editors.asp
+      - link "HTML Basic " [ref=e93] [cursor=pointer]:
+        - /url: html_basic.asp
+        - text: HTML Basic
+        - generic: 
+      - link "HTML Elements " [ref=e94] [cursor=pointer]:
+        - /url: html_elements.asp
+        - text: HTML Elements
+        - generic: 
+      - link "HTML Attributes " [ref=e95] [cursor=pointer]:
+        - /url: html_attributes.asp
+        - text: HTML Attributes
+        - generic: 
+      - link "HTML Headings " [ref=e96] [cursor=pointer]:
+        - /url: html_headings.asp
+        - text: HTML Headings
+        - generic: 
+      - link "HTML Paragraphs " [ref=e97] [cursor=pointer]:
+        - /url: html_paragraphs.asp
+        - text: HTML Paragraphs
+        - generic: 
+      - link "HTML Styles " [ref=e98] [cursor=pointer]:
+        - /url: html_styles.asp
+        - text: HTML Styles
+        - generic: 
+      - link "HTML Formatting " [ref=e99] [cursor=pointer]:
+        - /url: html_formatting.asp
+        - text: HTML Formatting
+        - generic: 
+      - link "HTML Quotations " [ref=e100] [cursor=pointer]:
+        - /url: html_quotation_elements.asp
+        - text: HTML Quotations
+        - generic: 
+      - link "HTML Comments " [ref=e101] [cursor=pointer]:
+        - /url: html_comments.asp
+        - text: HTML Comments
+        - generic: 
+      - link "HTML Colors " [ref=e102] [cursor=pointer]:
+        - /url: html_colors.asp
+        - text: HTML Colors
+        - generic: 
+      - link "HTML CSS " [ref=e103] [cursor=pointer]:
+        - /url: html_css.asp
+        - text: HTML CSS
+        - generic: 
+      - link "HTML Links " [ref=e104] [cursor=pointer]:
+        - /url: html_links.asp
+        - text: HTML Links
+        - generic: 
+      - link "HTML Images " [ref=e105] [cursor=pointer]:
+        - /url: html_images.asp
+        - text: HTML Images
+        - generic: 
+      - link "HTML Project" [ref=e106] [cursor=pointer]:
+        - /url: html_project_bio.php
+      - link "HTML Favicon " [ref=e107] [cursor=pointer]:
+        - /url: html_favicon.asp
+        - text: HTML Favicon
+        - generic: 
+      - link "HTML Page Title " [ref=e108] [cursor=pointer]:
+        - /url: html_page_title.asp
+        - text: HTML Page Title
+        - generic: 
+      - link "HTML Tables " [ref=e109] [cursor=pointer]:
+        - /url: html_tables.asp
+        - text: HTML Tables
+        - generic: 
+      - generic [ref=e110]:
+        - link "HTML Tables" [ref=e111] [cursor=pointer]:
+          - /url: html_tables.asp
+        - link "Table Borders" [ref=e112] [cursor=pointer]:
+          - /url: html_table_borders.asp
+        - link "Table Sizes" [ref=e113] [cursor=pointer]:
+          - /url: html_table_sizes.asp
+        - link "Table Headers" [ref=e114] [cursor=pointer]:
+          - /url: html_table_headers.asp
+        - link "Padding & Spacing" [ref=e115] [cursor=pointer]:
+          - /url: html_table_padding_spacing.asp
+        - link "Colspan & Rowspan" [ref=e116] [cursor=pointer]:
+          - /url: html_table_colspan_rowspan.asp
+        - link "Table Styling" [ref=e117] [cursor=pointer]:
+          - /url: html_table_styling.asp
+        - link "Table Colgroup" [ref=e118] [cursor=pointer]:
+          - /url: html_table_colgroup.asp
+        - link "Exercises" [ref=e119] [cursor=pointer]:
+          - /url: html_exercise_embed.asp?topic=tables
+        - link "Code Challenge" [ref=e120] [cursor=pointer]:
+          - /url: html_challenges_tables.asp
+      - link "HTML Lists " [ref=e121] [cursor=pointer]:
+        - /url: html_lists.asp
+        - text: HTML Lists
+        - generic: 
+      - link "HTML Block & Inline " [ref=e122] [cursor=pointer]:
+        - /url: html_blocks.asp
+        - text: HTML Block & Inline
+        - generic: 
+      - link "HTML Div " [ref=e123] [cursor=pointer]:
+        - /url: html_div.asp
+        - text: HTML Div
+        - generic: 
+      - link "HTML Classes " [ref=e124] [cursor=pointer]:
+        - /url: html_classes.asp
+        - text: HTML Classes
+        - generic: 
+      - link "HTML Id " [ref=e125] [cursor=pointer]:
+        - /url: html_id.asp
+        - text: HTML Id
+        - generic: 
+      - link "HTML Buttons " [ref=e126] [cursor=pointer]:
+        - /url: html_buttons.asp
+        - text: HTML Buttons
+        - generic: 
+      - link "HTML Iframes " [ref=e127] [cursor=pointer]:
+        - /url: html_iframe.asp
+        - text: HTML Iframes
+        - generic: 
+      - link "HTML JavaScript " [ref=e128] [cursor=pointer]:
+        - /url: html_scripts.asp
+        - text: HTML JavaScript
+        - generic: 
+      - link "HTML File Paths " [ref=e129] [cursor=pointer]:
+        - /url: html_filepaths.asp
+        - text: HTML File Paths
+        - generic: 
+      - link "HTML Head " [ref=e130] [cursor=pointer]:
+        - /url: html_head.asp
+        - text: HTML Head
+        - generic: 
+      - link "HTML Layout " [ref=e131] [cursor=pointer]:
+        - /url: html_layout.asp
+        - text: HTML Layout
+        - generic: 
+      - link "HTML Responsive " [ref=e132] [cursor=pointer]:
+        - /url: html_responsive.asp
+        - text: HTML Responsive
+        - generic: 
+      - link "HTML Computercode " [ref=e133] [cursor=pointer]:
+        - /url: html_computercode_elements.asp
+        - text: HTML Computercode
+        - generic: 
+      - link "HTML Semantics " [ref=e134] [cursor=pointer]:
+        - /url: html5_semantic_elements.asp
+        - text: HTML Semantics
+        - generic: 
+      - link "HTML Style Guide" [ref=e135] [cursor=pointer]:
+        - /url: html5_syntax.asp
+      - link "HTML Entities " [ref=e136] [cursor=pointer]:
+        - /url: html_entities.asp
+        - text: HTML Entities
+        - generic: 
+      - link "HTML Symbols" [ref=e137] [cursor=pointer]:
+        - /url: html_symbols.asp
+      - link "HTML Emojis" [ref=e138] [cursor=pointer]:
+        - /url: html_emojis.asp
+      - link "HTML Charsets" [ref=e139] [cursor=pointer]:
+        - /url: html_charset.asp
+      - link "HTML URL Encode" [ref=e140] [cursor=pointer]:
+        - /url: html_urlencode.asp
+      - link "HTML vs. XHTML" [ref=e141] [cursor=pointer]:
+        - /url: html_xhtml.asp
+      - heading "HTML Forms" [level=2] [ref=e142]
+      - link "HTML Forms " [ref=e143] [cursor=pointer]:
+        - /url: html_forms.asp
+        - text: HTML Forms
+        - generic: 
+      - link "HTML Form Attributes " [ref=e144] [cursor=pointer]:
+        - /url: html_forms_attributes.asp
+        - text: HTML Form Attributes
+        - generic: 
+      - link "HTML Form Elements " [ref=e145] [cursor=pointer]:
+        - /url: html_form_elements.asp
+        - text: HTML Form Elements
+        - generic: 
+      - link "HTML Input Types " [ref=e146] [cursor=pointer]:
+        - /url: html_form_input_types.asp
+        - text: HTML Input Types
+        - generic: 
+      - link "HTML Input Attributes " [ref=e147] [cursor=pointer]:
+        - /url: html_form_attributes.asp
+        - text: HTML Input Attributes
+        - generic: 
+      - link "Input Form Attributes " [ref=e148] [cursor=pointer]:
+        - /url: html_form_attributes_form.asp
+        - text: Input Form Attributes
+        - generic: 
+      - heading "HTML Graphics" [level=2] [ref=e149]
+      - link "HTML Canvas " [ref=e150] [cursor=pointer]:
+        - /url: html5_canvas.asp
+        - text: HTML Canvas
+        - generic: 
+      - link "HTML SVG " [ref=e151] [cursor=pointer]:
+        - /url: html5_svg.asp
+        - text: HTML SVG
+        - generic: 
+      - heading "HTML Media" [level=2] [ref=e152]
+      - link "HTML Media" [ref=e153] [cursor=pointer]:
+        - /url: html_media.asp
+      - link "HTML Video " [ref=e154] [cursor=pointer]:
+        - /url: html5_video.asp
+        - text: HTML Video
+        - generic: 
+      - link "HTML Audio " [ref=e155] [cursor=pointer]:
+        - /url: html5_audio.asp
+        - text: HTML Audio
+        - generic: 
+      - link "HTML Plug-ins" [ref=e156] [cursor=pointer]:
+        - /url: html_object.asp
+      - link "HTML YouTube" [ref=e157] [cursor=pointer]:
+        - /url: html_youtube.asp
+      - heading "HTML APIs" [level=2] [ref=e158]
+      - link "HTML Web APIs" [ref=e159] [cursor=pointer]:
+        - /url: html5_api_whatis.asp
+      - link "HTML Geolocation" [ref=e160] [cursor=pointer]:
+        - /url: html5_geolocation.asp
+      - link "HTML Drag and Drop" [ref=e161] [cursor=pointer]:
+        - /url: html5_draganddrop.asp
+      - link "HTML Web Storage" [ref=e162] [cursor=pointer]:
+        - /url: html5_webstorage.asp
+      - link "HTML Web Workers" [ref=e163] [cursor=pointer]:
+        - /url: html5_webworkers.asp
+      - link "HTML SSE" [ref=e164] [cursor=pointer]:
+        - /url: html5_serversentevents.asp
+      - heading "HTML Cert" [level=2] [ref=e165]
+      - link "HTML Certificate" [ref=e166] [cursor=pointer]:
+        - /url: html_exam.asp
+      - heading "HTML Examples" [level=2] [ref=e167]
+      - link "HTML Examples" [ref=e168] [cursor=pointer]:
+        - /url: html_examples.asp
+      - link "HTML Editor" [ref=e169] [cursor=pointer]:
+        - /url: html_editor.asp
+      - link "HTML Quiz" [ref=e170] [cursor=pointer]:
+        - /url: html_quiz.asp
+      - link "HTML Exercises" [ref=e171] [cursor=pointer]:
+        - /url: html_exercises.asp
+      - link "HTML Challenges" [ref=e172] [cursor=pointer]:
+        - /url: html_challenges.asp
+      - link "HTML Website" [ref=e173] [cursor=pointer]:
+        - /url: html_website.asp
+      - link "HTML Syllabus" [ref=e174] [cursor=pointer]:
+        - /url: html_syllabus.asp
+      - link "HTML Study Plan" [ref=e175] [cursor=pointer]:
+        - /url: html_study_plan.asp
+      - link "HTML Interview Prep" [ref=e176] [cursor=pointer]:
+        - /url: html_interview_prep.asp
+      - link "HTML Bootcamp" [ref=e177] [cursor=pointer]:
+        - /url: html_bootcamp.asp
+      - link "HTML Summary" [ref=e178] [cursor=pointer]:
+        - /url: html_summary.asp
+      - link "HTML Accessibility" [ref=e179] [cursor=pointer]:
+        - /url: html_accessibility.asp
+      - heading "HTML References" [level=2] [ref=e180]
+      - link "HTML Tag List" [ref=e181] [cursor=pointer]:
+        - /url: /tags/default.asp
+      - link "HTML Attributes" [ref=e182] [cursor=pointer]:
+        - /url: /tags/ref_attributes.asp
+      - link "HTML Global Attributes" [ref=e183] [cursor=pointer]:
+        - /url: /tags/ref_standardattributes.asp
+      - link "HTML Browser Support" [ref=e184] [cursor=pointer]:
+        - /url: /tags/ref_html_browsersupport.asp
+      - link "HTML Events" [ref=e185] [cursor=pointer]:
+        - /url: /tags/ref_eventattributes.asp
+      - link "HTML Colors" [ref=e186] [cursor=pointer]:
+        - /url: /tags/ref_colornames.asp
+      - link "HTML Canvas" [ref=e187] [cursor=pointer]:
+        - /url: /tags/ref_canvas.asp
+      - link "HTML Audio/Video" [ref=e188] [cursor=pointer]:
+        - /url: /tags/ref_av_dom.asp
+      - link "HTML Doctypes" [ref=e189] [cursor=pointer]:
+        - /url: /tags/ref_html_dtd.asp
+      - link "HTML Character Sets" [ref=e190] [cursor=pointer]:
+        - /url: /tags/ref_charactersets.asp
+      - link "HTML URL Encode" [ref=e191] [cursor=pointer]:
+        - /url: /tags/ref_urlencode.asp
+      - link "HTML Lang Codes" [ref=e192] [cursor=pointer]:
+        - /url: /tags/ref_language_codes.asp
+      - link "HTTP Messages" [ref=e193] [cursor=pointer]:
+        - /url: /tags/ref_httpmessages.asp
+      - link "HTTP Methods" [ref=e194] [cursor=pointer]:
+        - /url: /tags/ref_httpmethods.asp
+      - link "PX to EM Converter" [ref=e195] [cursor=pointer]:
+        - /url: /tags/ref_pxtoemconversion.asp
+      - link "Keyboard Shortcuts" [ref=e196] [cursor=pointer]:
+        - /url: /tags/ref_keyboardshortcuts.asp
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - heading "HTML Tables" [level=1] [ref=e201]
+        - generic [ref=e202]:
+          - link "❮ Previous" [ref=e203] [cursor=pointer]:
+            - /url: html_exercise_embed.asp?topic=page_title
+          - link "Next ❯" [ref=e204] [cursor=pointer]:
+            - /url: html_table_borders.asp
+        - separator [ref=e205]
+        - paragraph [ref=e206]: HTML tables allow web developers to arrange data into rows and columns.
+        - separator [ref=e207]
+        - generic [ref=e208]:
+          - heading "Example" [level=3] [ref=e209]
+          - table [ref=e211]:
+            - rowgroup [ref=e212]:
+              - row "Company Contact Country" [ref=e213]:
+                - columnheader "Company" [ref=e214]
+                - columnheader "Contact" [ref=e215]
+                - columnheader "Country" [ref=e216]
+              - row "Alfreds Futterkiste Maria Anders Germany" [ref=e217]:
+                - cell "Alfreds Futterkiste" [ref=e218]
+                - cell "Maria Anders" [ref=e219]
+                - cell "Germany" [ref=e220]
+              - row "Centro comercial Moctezuma Francisco Chang Mexico" [ref=e221]:
+                - cell "Centro comercial Moctezuma" [ref=e222]
+                - cell "Francisco Chang" [ref=e223]
+                - cell "Mexico" [ref=e224]
+              - row "Ernst Handel Roland Mendel Austria" [ref=e225]:
+                - cell "Ernst Handel" [ref=e226]
+                - cell "Roland Mendel" [ref=e227]
+                - cell "Austria" [ref=e228]
+              - row "Island Trading Helen Bennett UK" [ref=e229]:
+                - cell "Island Trading" [ref=e230]
+                - cell "Helen Bennett" [ref=e231]
+                - cell "UK" [ref=e232]
+              - row "Laughing Bacchus Winecellars Yoshi Tannamuri Canada" [ref=e233]:
+                - cell "Laughing Bacchus Winecellars" [ref=e234]
+                - cell "Yoshi Tannamuri" [ref=e235]
+                - cell "Canada" [ref=e236]
+              - row "Magazzini Alimentari Riuniti Giovanni Rovelli Italy" [ref=e237]:
+                - cell "Magazzini Alimentari Riuniti" [ref=e238]
+                - cell "Giovanni Rovelli" [ref=e239]
+                - cell "Italy" [ref=e240]
+          - link "Try it Yourself »" [ref=e241] [cursor=pointer]:
+            - /url: tryit.asp?filename=tryhtml_table_intro
+        - separator [ref=e242]
+        - heading "Define an HTML Table" [level=2] [ref=e243]
+        - paragraph [ref=e244]: A table in HTML consists of table cells inside rows and columns.
+        - generic [ref=e245]:
+          - heading "Example" [level=3] [ref=e246]
+          - paragraph [ref=e247]: "A simple HTML table:"
+          - generic [ref=e248]:
+            - generic [ref=e249]: <table>
+            - generic [ref=e250]: <tr>
+            - generic [ref=e251]: <th>
+            - text: Company
+            - generic [ref=e252]: </th>
+            - generic [ref=e253]: <th>
+            - text: Contact
+            - generic [ref=e254]: </th>
+            - generic [ref=e255]: <th>
+            - text: Country
+            - generic [ref=e256]: </th>
+            - generic [ref=e257]: </tr>
+            - generic [ref=e258]: <tr>
+            - generic [ref=e259]: <td>
+            - text: Alfreds Futterkiste
+            - generic [ref=e260]: </td>
+            - generic [ref=e261]: <td>
+            - text: Maria Anders
+            - generic [ref=e262]: </td>
+            - generic [ref=e263]: <td>
+            - text: Germany
+            - generic [ref=e264]: </td>
+            - generic [ref=e265]: </tr>
+            - generic [ref=e266]: <tr>
+            - generic [ref=e267]: <td>
+            - text: Centro comercial Moctezuma
+            - generic [ref=e268]: </td>
+            - generic [ref=e269]: <td>
+            - text: Francisco Chang
+            - generic [ref=e270]: </td>
+            - generic [ref=e271]: <td>
+            - text: Mexico
+            - generic [ref=e272]: </td>
+            - generic [ref=e273]: </tr>
+            - generic [ref=e274]: </table>
+          - link "Try it Yourself »" [ref=e275] [cursor=pointer]:
+            - /url: tryit.asp?filename=tryhtml_table3
+        - separator [ref=e276]
+        - heading "Table Cells" [level=2] [ref=e277]
+        - paragraph [ref=e278]:
+          - text: Each table cell is defined by a
+          - code [ref=e279]: <td>
+          - text: and a
+          - code [ref=e280]: </td>
+          - text: tag.
+        - paragraph [ref=e282]:
+          - code [ref=e283]: td
+          - text: stands for table data.
+        - paragraph [ref=e284]:
+          - text: Everything between
+          - code [ref=e285]: <td>
+          - text: and
+          - code [ref=e286]: </td>
+          - text: is the content of a table cell.
+        - generic [ref=e287]:
+          - heading "Example" [level=3] [ref=e288]
+          - generic [ref=e289]:
+            - generic [ref=e290]: <table>
+            - generic [ref=e291]: <tr>
+            - generic [ref=e292]: <td>
+            - text: Emil
+            - generic [ref=e293]: </td>
+            - generic [ref=e294]: <td>
+            - text: Tobias
+            - generic [ref=e295]: </td>
+            - generic [ref=e296]: <td>
+            - text: Linus
+            - generic [ref=e297]: </td>
+            - generic [ref=e298]: </tr>
+            - generic [ref=e299]: </table>
+          - link "Try it Yourself »" [ref=e300] [cursor=pointer]:
+            - /url: tryit.asp?filename=tryhtml_table4
+        - paragraph [ref=e302]:
+          - strong [ref=e303]: "Note:"
+          - text: "A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc."
+        - separator [ref=e304]
+        - paragraph [ref=e307]:
+          - link "REMOVE ADS" [ref=e308] [cursor=pointer]:
+            - /url: https://order.w3schools.com/plans
+        - separator [ref=e309]
+        - heading "Table Rows" [level=2] [ref=e310]
+        - paragraph [ref=e311]:
+          - text: Each table row starts with a
+          - code [ref=e312]: <tr>
+          - text: and ends with a
+          - code [ref=e313]: </tr>
+          - text: tag.
+        - paragraph [ref=e315]:
+          - code [ref=e316]: tr
+          - text: stands for table row.
+        - generic [ref=e317]:
+          - heading "Example" [level=3] [ref=e318]
+          - generic [ref=e319]:
+            - generic [ref=e320]: <table>
+            - generic [ref=e321]: <tr>
+            - generic [ref=e322]: <td>
+            - text: Emil
+            - generic [ref=e323]: </td>
+            - generic [ref=e324]: <td>
+            - text: Tobias
+            - generic [ref=e325]: </td>
+            - generic [ref=e326]: <td>
+            - text: Linus
+            - generic [ref=e327]: </td>
+            - generic [ref=e328]: </tr>
+            - generic [ref=e329]: <tr>
+            - generic [ref=e330]: <td>
+            - text: "16"
+            - generic [ref=e331]: </td>
+            - generic [ref=e332]: <td>
+            - text: "14"
+            - generic [ref=e333]: </td>
+            - generic [ref=e334]: <td>
+            - text: "10"
+            - generic [ref=e335]: </td>
+            - generic [ref=e336]: </tr>
+            - generic [ref=e337]: </table>
+          - link "Try it Yourself »" [ref=e338] [cursor=pointer]:
+            - /url: tryit.asp?filename=tryhtml_table5
+        - paragraph [ref=e339]: You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.
+        - paragraph [ref=e341]:
+          - strong [ref=e342]: "Note:"
+          - text: There are times when a row can have fewer or more cells than another. You will learn about that in a later chapter.
+        - separator [ref=e343]
+        - heading "Table Headers" [level=2] [ref=e344]
+        - paragraph [ref=e345]:
+          - text: Sometimes you want your cells to be table header cells. In those cases use the
+          - code [ref=e346]: <th>
+          - text: tag instead of the
+          - code [ref=e347]: <td>
+          - text: "tag:"
+        - paragraph [ref=e349]:
+          - code [ref=e350]: th
+          - text: stands for table header.
+        - generic [ref=e351]:
+          - heading "Example" [level=3] [ref=e352]
+          - paragraph [ref=e353]: "Let the first row be table header cells:"
+          - generic [ref=e354]:
+            - generic [ref=e355]: <table>
+            - generic [ref=e356]: <tr>
+            - generic [ref=e357]: <th>
+            - text: Person 1
+            - generic [ref=e358]: </th>
+            - generic [ref=e359]: <th>
+            - text: Person 2
+            - generic [ref=e360]: </th>
+            - generic [ref=e361]: <th>
+            - text: Person 3
+            - generic [ref=e362]: </th>
+            - generic [ref=e363]: </tr>
+            - generic [ref=e364]: <tr>
+            - generic [ref=e365]: <td>
+            - text: Emil
+            - generic [ref=e366]: </td>
+            - generic [ref=e367]: <td>
+            - text: Tobias
+            - generic [ref=e368]: </td>
+            - generic [ref=e369]: <td>
+            - text: Linus
+            - generic [ref=e370]: </td>
+            - generic [ref=e371]: </tr>
+            - generic [ref=e372]: <tr>
+            - generic [ref=e373]: <td>
+            - text: "16"
+            - generic [ref=e374]: </td>
+            - generic [ref=e375]: <td>
+            - text: "14"
+            - generic [ref=e376]: </td>
+            - generic [ref=e377]: <td>
+            - text: "10"
+            - generic [ref=e378]: </td>
+            - generic [ref=e379]: </tr>
+            - generic [ref=e380]: </table>
+          - link "Try it Yourself »" [ref=e381] [cursor=pointer]:
+            - /url: tryit.asp?filename=tryhtml_table6
+        - paragraph [ref=e382]:
+          - text: By default, the text in
+          - code [ref=e383]: <th>
+          - text: elements are bold and centered, but you can change that with CSS.
+        - paragraph [ref=e385]:
+          - link "REMOVE ADS" [ref=e386] [cursor=pointer]:
+            - /url: https://order.w3schools.com/plans
+        - separator [ref=e387]
+        - heading "HTML Table Tags" [level=2] [ref=e388]
+        - table [ref=e389]:
+          - rowgroup [ref=e390]:
+            - row "Tag Description" [ref=e391]:
+              - columnheader "Tag" [ref=e392]
+              - columnheader "Description" [ref=e393]
+            - row "<table> Defines a table" [ref=e394]:
+              - cell "<table>" [ref=e395]:
+                - link "<table>" [ref=e396] [cursor=pointer]:
+                  - /url: /tags/tag_table.asp
+              - cell "Defines a table" [ref=e397]
+            - row "<th> Defines a header cell in a table" [ref=e398]:
+              - cell "<th>" [ref=e399]:
+                - link "<th>" [ref=e400] [cursor=pointer]:
+                  - /url: /tags/tag_th.asp
+              - cell "Defines a header cell in a table" [ref=e401]
+            - row "<tr> Defines a row in a table" [ref=e402]:
+              - cell "<tr>" [ref=e403]:
+                - link "<tr>" [ref=e404] [cursor=pointer]:
+                  - /url: /tags/tag_tr.asp
+              - cell "Defines a row in a table" [ref=e405]
+            - row "<td> Defines a cell in a table" [ref=e406]:
+              - cell "<td>" [ref=e407]:
+                - link "<td>" [ref=e408] [cursor=pointer]:
+                  - /url: /tags/tag_td.asp
+              - cell "Defines a cell in a table" [ref=e409]
+            - row "<caption> Defines a table caption" [ref=e410]:
+              - cell "<caption>" [ref=e411]:
+                - link "<caption>" [ref=e412] [cursor=pointer]:
+                  - /url: /tags/tag_caption.asp
+              - cell "Defines a table caption" [ref=e413]
+            - row "<colgroup> Specifies a group of one or more columns in a table for formatting" [ref=e414]:
+              - cell "<colgroup>" [ref=e415]:
+                - link "<colgroup>" [ref=e416] [cursor=pointer]:
+                  - /url: /tags/tag_colgroup.asp
+              - cell "Specifies a group of one or more columns in a table for formatting" [ref=e417]
+            - row "<col> Specifies column properties for each column within a <colgroup> element" [ref=e418]:
+              - cell "<col>" [ref=e419]:
+                - link "<col>" [ref=e420] [cursor=pointer]:
+                  - /url: /tags/tag_col.asp
+              - cell "Specifies column properties for each column within a <colgroup> element" [ref=e421]
+            - row "<thead> Groups the header content in a table" [ref=e422]:
+              - cell "<thead>" [ref=e423]:
+                - link "<thead>" [ref=e424] [cursor=pointer]:
+                  - /url: /tags/tag_thead.asp
+              - cell "Groups the header content in a table" [ref=e425]
+            - row "<tbody> Groups the body content in a table" [ref=e426]:
+              - cell "<tbody>" [ref=e427]:
+                - link "<tbody>" [ref=e428] [cursor=pointer]:
+                  - /url: /tags/tag_tbody.asp
+              - cell "Groups the body content in a table" [ref=e429]
+            - row "<tfoot> Groups the footer content in a table" [ref=e430]:
+              - cell "<tfoot>" [ref=e431]:
+                - link "<tfoot>" [ref=e432] [cursor=pointer]:
+                  - /url: /tags/tag_tfoot.asp
+              - cell "Groups the footer content in a table" [ref=e433]
+        - paragraph [ref=e435]:
+          - text: For a complete list of all available HTML tags, visit our
+          - link "HTML Tag Reference" [ref=e436] [cursor=pointer]:
+            - /url: /tags/default.asp
+          - text: .
+        - separator [ref=e437]
+        - generic [ref=e438]:
+          - 'heading "Video: HTML Tables" [level=2] [ref=e439]'
+          - link "Tutorial on YouTube Tutorial on YouTube" [ref=e440] [cursor=pointer]:
+            - /url: https://youtu.be/e62D-aayveY&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s
+            - generic [ref=e441]:
+              - generic:
+                - generic:
+                  - img "Tutorial on YouTube"
+              - generic:
+                - img "Tutorial on YouTube"
+        - separator [ref=e442]
+        - generic [ref=e443]:
+          - link "❮ Previous" [ref=e444] [cursor=pointer]:
+            - /url: html_exercise_embed.asp?topic=page_title
+          - link "Next ❯" [ref=e445] [cursor=pointer]:
+            - /url: html_table_borders.asp
+        - link "Sign in to track your progress" [ref=e448] [cursor=pointer]:
+          - /url: https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fpathfinder.w3schools.com&origin=https%3A%2F%2Fwww.w3schools.com%2FHtml%2Fhtml_tables.asp
+          - text: Sign in to track progress
+      - generic [ref=e449]:
+        - link "Get Certified Offer" [ref=e451] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/products/w3schools-full-access-course
+          - img "Get Certified Offer" [ref=e453]
+        - generic [ref=e455]:
+          - link "" [ref=e456] [cursor=pointer]:
+            - /url: https://www.youtube.com/@w3schools
+            - generic [ref=e457]: 
+          - link "" [ref=e458] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/w3schools.com/
+            - generic [ref=e459]: 
+          - link "" [ref=e460] [cursor=pointer]:
+            - /url: https://discord.com/invite/w3schools
+            - generic [ref=e461]: 
+          - link "" [ref=e462] [cursor=pointer]:
+            - /url: https://www.facebook.com/w3schoolscom/
+            - generic [ref=e463]: 
+          - link "" [ref=e464] [cursor=pointer]:
+            - /url: https://www.instagram.com/w3schools.com_official/
+            - generic [ref=e465]: 
+          - link "" [ref=e466] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@w3schools.com
+            - generic [ref=e467]: 
+        - paragraph [ref=e470]:
+          - link "REMOVE ADS" [ref=e471] [cursor=pointer]:
+            - /url: https://order.w3schools.com/plans
+  - generic [ref=e476]:
+    - generic [ref=e477]:
+      - link "W3Schools.com" [ref=e479] [cursor=pointer]:
+        - /url: //www.w3schools.com
+        - generic [ref=e480]: 
+      - link "PLUS" [ref=e482] [cursor=pointer]:
+        - /url: https://order.w3schools.com/plans
+      - link "SPACES" [ref=e484] [cursor=pointer]:
+        - /url: /spaces/index.php
+      - link "GET CERTIFIED" [ref=e486] [cursor=pointer]:
+        - /url: https://campus.w3schools.com/collections/certifications
+      - link "FOR TEACHERS" [ref=e488] [cursor=pointer]:
+        - /url: /academy/index.php
+      - link "PRACTICE" [ref=e490] [cursor=pointer]:
+        - /url: /practice/index.php
+      - link "CONTACT US" [ref=e492] [cursor=pointer]:
+        - /url: javascript:void(0);
+    - generic [ref=e493]:
+      - generic [ref=e494]:
+        - heading "Top Tutorials" [level=5] [ref=e495]
+        - link "HTML Tutorial" [ref=e496] [cursor=pointer]:
+          - /url: /html/default.asp
+        - link "CSS Tutorial" [ref=e497] [cursor=pointer]:
+          - /url: /css/default.asp
+        - link "JavaScript Tutorial" [ref=e498] [cursor=pointer]:
+          - /url: /js/default.asp
+        - link "How To Tutorial" [ref=e499] [cursor=pointer]:
+          - /url: /howto/default.asp
+        - link "SQL Tutorial" [ref=e500] [cursor=pointer]:
+          - /url: /sql/default.asp
+        - link "Python Tutorial" [ref=e501] [cursor=pointer]:
+          - /url: /python/default.asp
+        - link "W3.CSS Tutorial" [ref=e502] [cursor=pointer]:
+          - /url: /w3css/default.asp
+        - link "Bootstrap Tutorial" [ref=e503] [cursor=pointer]:
+          - /url: /bootstrap/bootstrap_ver.asp
+        - link "PHP Tutorial" [ref=e504] [cursor=pointer]:
+          - /url: /php/default.asp
+        - link "Java Tutorial" [ref=e505] [cursor=pointer]:
+          - /url: /java/default.asp
+        - link "C++ Tutorial" [ref=e506] [cursor=pointer]:
+          - /url: /cpp/default.asp
+        - link "jQuery Tutorial" [ref=e507] [cursor=pointer]:
+          - /url: /jquery/default.asp
+      - generic [ref=e508]:
+        - heading "Top References" [level=5] [ref=e509]
+        - link "HTML Reference" [ref=e510] [cursor=pointer]:
+          - /url: /tags/default.asp
+        - link "CSS Reference" [ref=e511] [cursor=pointer]:
+          - /url: /cssref/index.php
+        - link "JavaScript Reference" [ref=e512] [cursor=pointer]:
+          - /url: /jsref/default.asp
+        - link "SQL Reference" [ref=e513] [cursor=pointer]:
+          - /url: /sql/sql_ref_keywords.asp
+        - link "Python Reference" [ref=e514] [cursor=pointer]:
+          - /url: /python/python_reference.asp
+        - link "W3.CSS Reference" [ref=e515] [cursor=pointer]:
+          - /url: /w3css/w3css_references.asp
+        - link "Bootstrap Reference" [ref=e516] [cursor=pointer]:
+          - /url: /bootstrap/bootstrap_ref_all_classes.asp
+        - link "PHP Reference" [ref=e517] [cursor=pointer]:
+          - /url: /php/php_ref_overview.asp
+        - link "HTML Colors" [ref=e518] [cursor=pointer]:
+          - /url: /colors/colors_names.asp
+        - link "Java Reference" [ref=e519] [cursor=pointer]:
+          - /url: /java/java_ref_keywords.asp
+        - link "AngularJS Reference" [ref=e520] [cursor=pointer]:
+          - /url: /angularjs/angularjs_ref_directives.asp
+        - link "jQuery Reference" [ref=e521] [cursor=pointer]:
+          - /url: /jquery/jquery_ref_overview.asp
+      - generic [ref=e522]:
+        - heading "Top Examples" [level=5] [ref=e523]
+        - link "HTML Examples" [ref=e524] [cursor=pointer]:
+          - /url: /html/html_examples.asp
+        - link "CSS Examples" [ref=e525] [cursor=pointer]:
+          - /url: /css/css_examples.asp
+        - link "JavaScript Examples" [ref=e526] [cursor=pointer]:
+          - /url: /js/js_examples.asp
+        - link "How To Examples" [ref=e527] [cursor=pointer]:
+          - /url: /howto/default.asp
+        - link "SQL Examples" [ref=e528] [cursor=pointer]:
+          - /url: /sql/sql_examples.asp
+        - link "Python Examples" [ref=e529] [cursor=pointer]:
+          - /url: /python/python_examples.asp
+        - link "W3.CSS Examples" [ref=e530] [cursor=pointer]:
+          - /url: /w3css/w3css_examples.asp
+        - link "Bootstrap Examples" [ref=e531] [cursor=pointer]:
+          - /url: /bootstrap/bootstrap_examples.asp
+        - link "PHP Examples" [ref=e532] [cursor=pointer]:
+          - /url: /php/php_examples.asp
+        - link "Java Examples" [ref=e533] [cursor=pointer]:
+          - /url: /java/java_examples.asp
+        - link "XML Examples" [ref=e534] [cursor=pointer]:
+          - /url: /xml/xml_examples.asp
+        - link "jQuery Examples" [ref=e535] [cursor=pointer]:
+          - /url: /jquery/jquery_examples.asp
+      - generic [ref=e536]:
+        - link "Get Certified" [ref=e537] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/course-catalog
+          - heading "Get Certified" [level=5] [ref=e538]
+        - link "HTML Certificate" [ref=e539] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/html-certificate
+        - link "CSS Certificate" [ref=e540] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/css-certificate
+        - link "JavaScript Certificate" [ref=e541] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/javascript-certificate
+        - link "Front End Certificate" [ref=e542] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/front-end-certificate
+        - link "SQL Certificate" [ref=e543] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/sql-certificate
+        - link "Python Certificate" [ref=e544] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/python-certificate
+        - link "PHP Certificate" [ref=e545] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/php-certificate
+        - link "jQuery Certificate" [ref=e546] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/jquery-certificate
+        - link "Java Certificate" [ref=e547] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/java-certificate
+        - link "C++ Certificate" [ref=e548] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/c-certificate
+        - link "C# Certificate" [ref=e549] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/c-certificate-1
+        - link "XML Certificate" [ref=e550] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/certifications/products/xml-certificate
+    - generic [ref=e551]:
+      - link "" [ref=e552] [cursor=pointer]:
+        - /url: https://www.youtube.com/@w3schools
+        - generic [ref=e553]: 
+      - link "" [ref=e554] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/w3schools.com/
+        - generic [ref=e555]: 
+      - link "" [ref=e556] [cursor=pointer]:
+        - /url: https://discord.com/invite/w3schools
+        - generic [ref=e557]: 
+      - link "" [ref=e558] [cursor=pointer]:
+        - /url: https://www.facebook.com/w3schoolscom/
+        - generic [ref=e559]: 
+      - link "" [ref=e560] [cursor=pointer]:
+        - /url: https://www.instagram.com/w3schools.com_official/
+        - generic [ref=e561]: 
+      - link "FORUM" [ref=e562] [cursor=pointer]:
+        - /url: /forum/index.php
+      - link "ABOUT" [ref=e563] [cursor=pointer]:
+        - /url: /about/default.asp
+      - link "ACADEMY" [ref=e564] [cursor=pointer]:
+        - /url: /academy/index.php
+    - generic [ref=e565]:
+      - text: W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our
+      - link "terms of use" [ref=e566] [cursor=pointer]:
+        - /url: /about/about_copyright.asp
+      - text: ", cookies and"
+      - link "privacy policy" [ref=e567] [cursor=pointer]:
+        - /url: /about/about_privacy.asp
+      - text: .
+      - link "Copyright 1999-2026" [ref=e568] [cursor=pointer]:
+        - /url: /about/about_copyright.asp
+      - text: by Refsnes Data. All Rights Reserved.
+      - link "W3Schools is Powered by W3.CSS" [ref=e569] [cursor=pointer]:
+        - /url: //www.w3schools.com/w3css/default.asp
+      - text: .
+  - text: "-->"
+  - img [ref=e571] [cursor=pointer]
+```

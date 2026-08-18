@@ -1,0 +1,13 @@
+No of options in multilistbox 12
+Blue
+Green
+Red
+Yellow
+White
+purple
+brown
+navy blue
+black
+silver
+golden
+light green

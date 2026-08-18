@@ -1,0 +1,9 @@
+[
+  'First Name',
+  'Last Name',
+  'Phone number',
+  'Country',
+  'Email address *',
+  'Password *',
+  'I agree with the terms and conditions'
+]

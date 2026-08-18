@@ -1,0 +1,34 @@
+No of links are 33
+Link Position 0: Forgotten password?
+Link Position 1: Create new account
+Link Position 2: हिन्दी
+Link Position 3: اردو
+Link Position 4: தமிழ்
+Link Position 5: বাংলা
+Link Position 6: मराठी
+Link Position 7: తెలుగు
+Link Position 8: More languages…
+Link Position 9: Sign up
+Link Position 10: Log in
+Link Position 11: Messenger
+Link Position 12: Facebook Lite
+Link Position 13: Video
+Link Position 14: Meta Pay
+Link Position 15: Meta Store
+Link Position 16: Meta Quest
+Link Position 17: Ray-Ban Meta
+Link Position 18: Meta AI
+Link Position 19: Instagram
+Link Position 20: Threads
+Link Position 21: Privacy Policy
+Link Position 22: Privacy Centre
+Link Position 23: About
+Link Position 24: Create ad
+Link Position 25: Create Page
+Link Position 26: Developers
+Link Position 27: Careers
+Link Position 28: Cookies
+Link Position 29: AdChoices
+Link Position 30: Terms
+Link Position 31: Help
+Link Position 32: Contact uploading and non-users

@@ -1,0 +1,5 @@
+No of checkboxes are 8
+false:Java
+false:C++
+true:selenium
+false:QTP

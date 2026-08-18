@@ -1,0 +1,3 @@
+alert
+I am a JS Alert
+You successfully clicked an alert

@@ -1,0 +1,301 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Calender1.spec.ts >> Handling Calender1
+- Location: tests\Calender1.spec.ts:2:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Flight Reservation" [ref=e4] [cursor=pointer]:
+    - /url: https://flights.qedgetech.com/
+    - img "Flight Reservation" [ref=e5]
+  - generic [ref=e9]:
+    - paragraph [ref=e10]: Please fill the following details
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Name *
+          - textbox "Name" [ref=e15]
+        - generic [ref=e16]:
+          - generic [ref=e17]: Contact Number *
+          - spinbutton [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]: Email *
+          - textbox "Email" [ref=e22]
+          - paragraph
+        - generic [ref=e23]:
+          - generic [ref=e24]: Password *
+          - textbox "Name * Contact Number * Email * Password * Gender * Date Of Birth *" [ref=e25]:
+            - /placeholder: Password
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: Gender *
+          - combobox [ref=e29]:
+            - option "Select Gender" [selected]
+            - option "Male"
+            - option "Female"
+        - generic [ref=e30]:
+          - generic [ref=e31]: Date Of Birth *
+          - textbox "Date of Birth in DD-MM-YYYY" [active] [ref=e32]
+      - generic [ref=e35]:
+        - checkbox "By Clicking Register button you agree to the QEdge privacy policy" [ref=e36]
+        - generic [ref=e37]: By Clicking Register button you agree to the QEdge privacy policy
+      - generic [ref=e39]:
+        - button "Register" [ref=e40] [cursor=pointer]
+        - paragraph [ref=e41]:
+          - text: Already User?
+          - link "Login" [ref=e42] [cursor=pointer]:
+            - /url: https://flights.qedgetech.com/
+          - text: here.
+  - generic [ref=e44]:
+    - generic [ref=e45]:
+      - generic "Prev" [ref=e46]:
+        - generic [ref=e47]: Prev
+      - generic "Next" [ref=e48]:
+        - generic [ref=e49]: Next
+      - generic [ref=e50]:
+        - combobox [ref=e51]:
+          - option "Jan"
+          - option "Feb"
+          - option "Mar"
+          - option "Apr"
+          - option "May"
+          - option "Jun"
+          - option "Jul"
+          - option "Aug"
+          - option "Sep"
+          - option "Oct"
+          - option "Nov" [selected]
+          - option "Dec"
+        - combobox [ref=e52]:
+          - option "1926"
+          - option "1927"
+          - option "1928"
+          - option "1929"
+          - option "1930"
+          - option "1931"
+          - option "1932"
+          - option "1933"
+          - option "1934"
+          - option "1935"
+          - option "1936"
+          - option "1937"
+          - option "1938"
+          - option "1939"
+          - option "1940"
+          - option "1941"
+          - option "1942"
+          - option "1943"
+          - option "1944"
+          - option "1945"
+          - option "1946"
+          - option "1947"
+          - option "1948"
+          - option "1949"
+          - option "1950"
+          - option "1951"
+          - option "1952"
+          - option "1953"
+          - option "1954"
+          - option "1955"
+          - option "1956"
+          - option "1957"
+          - option "1958"
+          - option "1959"
+          - option "1960"
+          - option "1961"
+          - option "1962"
+          - option "1963"
+          - option "1964"
+          - option "1965"
+          - option "1966"
+          - option "1967"
+          - option "1968"
+          - option "1969"
+          - option "1970"
+          - option "1971"
+          - option "1972"
+          - option "1973"
+          - option "1974"
+          - option "1975"
+          - option "1976"
+          - option "1977"
+          - option "1978"
+          - option "1979"
+          - option "1980"
+          - option "1981"
+          - option "1982"
+          - option "1983"
+          - option "1984"
+          - option "1985"
+          - option "1986"
+          - option "1987"
+          - option "1988"
+          - option "1989"
+          - option "1990"
+          - option "1991"
+          - option "1992"
+          - option "1993"
+          - option "1994"
+          - option "1995"
+          - option "1996"
+          - option "1997"
+          - option "1998"
+          - option "1999"
+          - option "2000" [selected]
+          - option "2001"
+          - option "2002"
+          - option "2003"
+          - option "2004"
+          - option "2005"
+          - option "2006"
+          - option "2007"
+          - option "2008"
+          - option "2009"
+          - option "2010"
+          - option "2011"
+          - option "2012"
+          - option "2013"
+          - option "2014"
+          - option "2015"
+          - option "2016"
+          - option "2017"
+          - option "2018"
+          - option "2019"
+          - option "2020"
+          - option "2021"
+          - option "2022"
+          - option "2023"
+          - option "2024"
+          - option "2025"
+          - option "2026"
+    - table [ref=e53]:
+      - rowgroup [ref=e54]:
+        - row "Su Mo Tu We Th Fr Sa" [ref=e55]:
+          - columnheader "Su" [ref=e56]
+          - columnheader "Mo" [ref=e57]
+          - columnheader "Tu" [ref=e58]
+          - columnheader "We" [ref=e59]
+          - columnheader "Th" [ref=e60]
+          - columnheader "Fr" [ref=e61]
+          - columnheader "Sa" [ref=e62]
+      - rowgroup [ref=e63]:
+        - row "1 2 3 4" [ref=e64]:
+          - cell [ref=e65]
+          - cell [ref=e66]
+          - cell [ref=e67]
+          - cell "1" [ref=e68]:
+            - link "1" [ref=e69] [cursor=pointer]:
+              - /url: "#"
+          - cell "2" [ref=e70]:
+            - link "2" [ref=e71] [cursor=pointer]:
+              - /url: "#"
+          - cell "3" [ref=e72]:
+            - link "3" [ref=e73] [cursor=pointer]:
+              - /url: "#"
+          - cell "4" [ref=e74]:
+            - link "4" [ref=e75] [cursor=pointer]:
+              - /url: "#"
+        - row "5 6 7 8 9 10 11" [ref=e76]:
+          - cell "5" [ref=e77]:
+            - link "5" [ref=e78] [cursor=pointer]:
+              - /url: "#"
+          - cell "6" [ref=e79]:
+            - link "6" [ref=e80] [cursor=pointer]:
+              - /url: "#"
+          - cell "7" [ref=e81]:
+            - link "7" [ref=e82] [cursor=pointer]:
+              - /url: "#"
+          - cell "8" [ref=e83]:
+            - link "8" [ref=e84] [cursor=pointer]:
+              - /url: "#"
+          - cell "9" [ref=e85]:
+            - link "9" [ref=e86] [cursor=pointer]:
+              - /url: "#"
+          - cell "10" [ref=e87]:
+            - link "10" [ref=e88] [cursor=pointer]:
+              - /url: "#"
+          - cell "11" [ref=e89]:
+            - link "11" [ref=e90] [cursor=pointer]:
+              - /url: "#"
+        - row "12 13 14 15 16 17 18" [ref=e91]:
+          - cell "12" [ref=e92]:
+            - link "12" [ref=e93] [cursor=pointer]:
+              - /url: "#"
+          - cell "13" [ref=e94]:
+            - link "13" [ref=e95] [cursor=pointer]:
+              - /url: "#"
+          - cell "14" [ref=e96]:
+            - link "14" [ref=e97] [cursor=pointer]:
+              - /url: "#"
+          - cell "15" [ref=e98]:
+            - link "15" [ref=e99] [cursor=pointer]:
+              - /url: "#"
+          - cell "16" [ref=e100]:
+            - link "16" [ref=e101] [cursor=pointer]:
+              - /url: "#"
+          - cell "17" [ref=e102]:
+            - link "17" [ref=e103] [cursor=pointer]:
+              - /url: "#"
+          - cell "18" [ref=e104]:
+            - link "18" [ref=e105] [cursor=pointer]:
+              - /url: "#"
+        - row "19 20 21 22 23 24 25" [ref=e106]:
+          - cell "19" [ref=e107]:
+            - link "19" [ref=e108] [cursor=pointer]:
+              - /url: "#"
+          - cell "20" [ref=e109]:
+            - link "20" [ref=e110] [cursor=pointer]:
+              - /url: "#"
+          - cell "21" [ref=e111]:
+            - link "21" [ref=e112] [cursor=pointer]:
+              - /url: "#"
+          - cell "22" [ref=e113]:
+            - link "22" [ref=e114] [cursor=pointer]:
+              - /url: "#"
+          - cell "23" [ref=e115]:
+            - link "23" [ref=e116] [cursor=pointer]:
+              - /url: "#"
+          - cell "24" [ref=e117]:
+            - link "24" [ref=e118] [cursor=pointer]:
+              - /url: "#"
+          - cell "25" [ref=e119]:
+            - link "25" [ref=e120] [cursor=pointer]:
+              - /url: "#"
+        - row "26 27 28 29 30" [ref=e121]:
+          - cell "26" [ref=e122]:
+            - link "26" [ref=e123] [cursor=pointer]:
+              - /url: "#"
+          - cell "27" [ref=e124]:
+            - link "27" [ref=e125] [cursor=pointer]:
+              - /url: "#"
+          - cell "28" [ref=e126]:
+            - link "28" [ref=e127] [cursor=pointer]:
+              - /url: "#"
+          - cell "29" [ref=e128]:
+            - link "29" [ref=e129] [cursor=pointer]:
+              - /url: "#"
+          - cell "30" [ref=e130]:
+            - link "30" [ref=e131] [cursor=pointer]:
+              - /url: "#"
+          - cell [ref=e132]
+          - cell [ref=e133]
+```

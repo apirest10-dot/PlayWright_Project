@@ -1,0 +1,1046 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: getmethods.spec.ts >> Validate Get methods
+- Location: tests\getmethods.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 30000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - alert "Subscribe To Notifications Now & Unlock Your Deal!" [active] [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - heading "Subscribe To Notifications Now & Unlock Your Deal!" [level=2] [ref=e6]
+        - paragraph [ref=e7]: Plus, you'll get the latest updates on sales, offers & everything new!
+      - generic [ref=e9]:
+        - button "No, Thanks" [ref=e10] [cursor=pointer]
+        - button "Subscribe" [ref=e11] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - link "Tata CLiQ Luxury":
+          - /url: https://luxury.tatacliq.com/
+          - generic [ref=e21] [cursor=pointer]: Tata CLiQ Luxury
+        - generic [ref=e22]:
+          - button "Sign in / Sign Up" [ref=e24] [cursor=pointer]
+          - link "Track Orders":
+            - /url: /my-account/orders
+            - button "Track Orders" [ref=e25] [cursor=pointer]
+          - link "CLiQ Care":
+            - /url: /my-account/cliq-care
+            - button "CLiQ Care" [ref=e26] [cursor=pointer]
+          - link "Gift Card":
+            - /url: /gift-cards
+            - button "Gift Card" [ref=e27] [cursor=pointer]
+          - link "CLiQ Cash":
+            - /url: /my-account/cliq-cash
+            - button "CLiQ Cash" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - button "Categories" [ref=e32] [cursor=pointer]: Categories
+          - button "Brands" [ref=e34] [cursor=pointer]: Brands
+        - generic [ref=e41]:
+          - button "search" [ref=e42] [cursor=pointer]
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - paragraph [ref=e48]: Search for
+              - generic [ref=e49]: Products
+              - generic [ref=e50]: Brands
+              - generic [ref=e51]: Categories
+            - searchbox "Search for Products, Brands, Categories and more..." [ref=e55]
+          - img "microphone" [ref=e57] [cursor=pointer]
+        - generic [ref=e58]:
+          - button "Alerts and Coupons" [ref=e59] [cursor=pointer]
+          - 'button "Go to Wishlist}" [ref=e60] [cursor=pointer]'
+          - button "Go to Cart" [ref=e61] [cursor=pointer]
+    - generic [ref=e62]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - link "image" [ref=e69] [cursor=pointer]:
+            - /url: /search?q=kitchen%20essential%20%26%20kitchen%20appliances:relevance:list:listId_4871f7ce2f8541899e7973faebed5a81:inStockFlag:true
+            - img "image" [ref=e71]
+          - link "image" [ref=e74] [cursor=pointer]:
+            - /url: /search/page-1?q=casual+wear+for+men%3Arelevance%3Alist%3AlistId_fff67c5f1147479baf12bb4a333f756e%3AinStockFlag%3Atrue%3Abrand%3AMBH11W00213%3Abrand%3AMBH11B10871%3Abrand%3AMBH11A00052%3Abrand%3AMBH11A00340%3Abrand%3AMBH11B10138%3Abrand%3AMBH11A00093%3Abrand%3AMBH11A00077%3Abrand%3AMBH11A00100%3Abrand%3AMBH11A00078%3Abrand%3AMBH11B27745%3Abrand%3AMBH11B11389%3Abrand%3AMBH11A00082%3Abrand%3AMBH11B11885%3Abrand%3AMBH11A00020%3Abrand%3AMBH11B10247%3Abrand%3AMBH11A00418%3Abrand%3AMBH11B14706%3Abrand%3AMBH11A00208%3Abrand%3AMBH11A00024%3Abrand%3AMBH11A00023%3Abrand%3AMBH11A00230%3Abrand%3AMBH11B10461%3Abrand%3AMBH11B11412%3Abrand%3AMBH11F00009%3Abrand%3AMBH11B11423%3Abrand%3AMBH11A00168%3Abrand%3AMBH11F00070%3Abrand%3AMBH11B13787%3Abrand%3AMBH11B10983%3Abrand%3AMBH11A00059%3Abrand%3AMBH11A00055%3Acategory%3AMSH1116%3AisDiscountedPrice%3A%E2%82%B939.5-%E2%82%B9100%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%25+and+more%3Abrand%3AMBH11A00497
+            - img "image" [ref=e76]
+          - link "image" [ref=e79] [cursor=pointer]:
+            - /url: /search/page-1?q=ethnic+wear+-+suits+%3Arelevance%3Alist%3AlistId_59a1e9ec8bcc43d9b58129df7c028544%3AinStockFlag%3Atrue%3Aprice%3A%E2%82%B91%2C501-%E2%82%B92%2C000%3Aprice%3A%E2%82%B91%2C001-%E2%82%B91%2C500%3AFabric-family-kidswear%3APolyester%3AFabric-family-kidswear%3ACotton%3AdiscountAll%3ADiscounted+Items%3Adisplay-classification%3AKurta+Set%3Adisplay-classification%3AKurta+Sets%3Adisplay-classification%3AKurta+set%3Adisplay-classification%3AKurta+Bottom+Set%3Aprice%3A%E2%82%B92%2C001-%E2%82%B92%2C500%3Abrand%3AMBH11B26897%3Abrand%3AMBH11B27656%3Abrand%3AMBH11B27723%3Abrand%3AMBH11A00005%3Abrand%3AMBH11B26501%3Abrand%3AMBH11A00002%3Abrand%3AMBH11B13459%3Abrand%3AMBH11A00198%3Abrand%3AMBH11B11076%3Abrand%3AMBH11B11293%3Abrand%3AMBH11A00367%3Abrand%3AMBH11B26999%3Abrand%3AMBH11B15564%3Abrand%3AMBH11B27588%3Abrand%3AMBH11B15621%3Abrand%3AMBH11B15307%3Abrand%3AMBH11B25877%3Abrand%3AMBH11B10536%3Abrand%3AMBH11B10519%3Abrand%3AMBH11A00041%3Abrand%3AMBH11B25800%3Abrand%3AMBH11B26042%3Abrand%3AMBH11B10328%3Abrand%3AMBH11B26589%3Abrand%3AMBH11B13200%3Abrand%3AMBH11A00006%3Abrand%3AMBH11B27420%3Abrand%3AMBH11B11777%3Abrand%3AMBH11B10666%3Abrand%3AMBH11A00438%3Abrand%3AMBH11B11108%3Abrand%3AMBH11A00371%3Abrand%3AMBH11A00348%3Aprice%3A%25E2%2582%25B92%252C501-%25E2%2582%25B93%252C000
+            - img "image" [ref=e81]
+          - link "image" [ref=e84] [cursor=pointer]:
+            - /url: /search?q=sports+footwear%3Arelevance%3Alist%3AlistId_6c322f05235946978c42cfa4ea5b0ad2%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+            - img "image" [ref=e86]
+          - link "image" [ref=e89] [cursor=pointer]:
+            - /url: /search?q=overall+western+wear%3Arelevance%3Alist%3AlistId_c1eb42b710e7492ab94e934c815f9e48%3AinStockFlag%3Atrue%3Abrand%3AMBH11F00009%3Abrand%3AMBH11B10513%3Abrand%3AMBH11A00497%3Abrand%3AMBH11B15469%3Abrand%3AMBH11B10983%3Abrand%3AMBH11B28752%3Abrand%3AMBH11B15567%3Abrand%3AMBH11B28594%3Abrand%3AMBH11A00201%3Abrand%3AMBH11A00050%3Abrand%3AMBH11B11389%3Abrand%3AMBH11B10514%3Abrand%3AMBH11A00340%3Abrand%3AMBH11A00092%3Abrand%3AMBH11A00019%3Abrand%3AMBH11A00168%3Abrand%3AMBH11B10871%3Abrand%3AMBH11A00418%3Abrand%3AMBH11W00213%3Abrand%3AMBH11A00018%3Abrand%3AMBH11B27769%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore&richplp=women-western-hybrid-plp&rcms=cft
+            - img "image" [ref=e91]
+          - link "image" [ref=e94] [cursor=pointer]:
+            - /url: /search?q=wrogn%3Arelevance%3Alist%3AlistId_1212de068484421a941436388093e4de%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+            - img "image" [ref=e96]
+          - link "image" [ref=e99] [cursor=pointer]:
+            - /url: /search?text=Beauty%20%26%20Grooming:relevance:list:listId_f85af50f07e3403fad46f51ee3d568d0
+            - img "image" [ref=e101]
+          - link "image" [ref=e104] [cursor=pointer]:
+            - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH15
+            - img "image" [ref=e106]
+          - link "image" [ref=e109] [cursor=pointer]:
+            - /url: /search?q=silver+++fashion%3Arelevance%3Alist%3AlistId_5b075802f45c4629b44673217d764cb4%3AinStockFlag%3Atrue%3Abrand%3AMBH20B11075%3Abrand%3AMBH19B14917%3Abrand%3AMBH20B14917%3Abrand%3AMBH19B10040%3Abrand%3AMBH20B27072%3Abrand%3AMBH19B27071%3Abrand%3AMBH19B12561%3Abrand%3AMBH19B10182%3Abrand%3AMBH20B26075%3Abrand%3AMBH19B27788%3Abrand%3AMBH20B27788%3Abrand%3AMBH19B10147%3Abrand%3AMBH19B27254%3Abrand%3AMBH20B26714%3Abrand%3AMBH20B26079%3Abrand%3AMBH19B13415%3Abrand%3AMBH19B29011%3Abrand%3AMBH19B28756%3Abrand%3AMBH20B27012%3Abrand%3AMBH19B10110%3Abrand%3AMBH20B10144%3Abrand%3AMBH19B26903%3Abrand%3AMBH20B27021%3Abrand%3AMBH19B10183%3Abrand%3AMBH20B10183%3Abrand%3AMBH19B29045%3Abrand%3AMBH19B10902%3Abrand%3AMBH20J00020%3Abrand%3AMBH19B10426%3Abrand%3AMBH19B15426%3Abrand%3AMBH19B27151%3Abrand%3AMBH19B10120
+            - img "image" [ref=e111]
+          - link "image" [ref=e114] [cursor=pointer]:
+            - /url: /search?q=kitchen%20essential%20%26%20kitchen%20appliances:relevance:list:listId_4871f7ce2f8541899e7973faebed5a81:inStockFlag:true
+            - img "image" [ref=e116]
+          - link "image" [ref=e119] [cursor=pointer]:
+            - /url: /search/page-1?q=casual+wear+for+men%3Arelevance%3Alist%3AlistId_fff67c5f1147479baf12bb4a333f756e%3AinStockFlag%3Atrue%3Abrand%3AMBH11W00213%3Abrand%3AMBH11B10871%3Abrand%3AMBH11A00052%3Abrand%3AMBH11A00340%3Abrand%3AMBH11B10138%3Abrand%3AMBH11A00093%3Abrand%3AMBH11A00077%3Abrand%3AMBH11A00100%3Abrand%3AMBH11A00078%3Abrand%3AMBH11B27745%3Abrand%3AMBH11B11389%3Abrand%3AMBH11A00082%3Abrand%3AMBH11B11885%3Abrand%3AMBH11A00020%3Abrand%3AMBH11B10247%3Abrand%3AMBH11A00418%3Abrand%3AMBH11B14706%3Abrand%3AMBH11A00208%3Abrand%3AMBH11A00024%3Abrand%3AMBH11A00023%3Abrand%3AMBH11A00230%3Abrand%3AMBH11B10461%3Abrand%3AMBH11B11412%3Abrand%3AMBH11F00009%3Abrand%3AMBH11B11423%3Abrand%3AMBH11A00168%3Abrand%3AMBH11F00070%3Abrand%3AMBH11B13787%3Abrand%3AMBH11B10983%3Abrand%3AMBH11A00059%3Abrand%3AMBH11A00055%3Acategory%3AMSH1116%3AisDiscountedPrice%3A%E2%82%B939.5-%E2%82%B9100%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%25+and+more%3Abrand%3AMBH11A00497
+            - img "image" [ref=e121]
+        - button [ref=e122] [cursor=pointer]:
+          - img [ref=e123]
+        - button [ref=e126] [cursor=pointer]:
+          - img [ref=e127]
+        - generic [ref=e130]:
+          - button [ref=e131]
+          - button [ref=e132]
+          - button [ref=e133]
+          - button [ref=e134]
+          - button [ref=e135]
+          - button [ref=e136]
+          - button [ref=e137]
+          - button [ref=e138]
+          - button [ref=e139]
+      - generic [ref=e140]:
+        - heading "Shop Drop" [level=2] [ref=e142]
+        - generic [ref=e143]:
+          - link "image" [ref=e145] [cursor=pointer]:
+            - /url: /westside?cms=cft
+            - img "image" [ref=e148]
+          - link "image" [ref=e150] [cursor=pointer]:
+            - /url: /search?text=Western%20Wear:relevance:list:listId_5ae0bf04a4fa4ba2b182a72589301580&richplp=women-western-hybrid-plp&rcms=cft
+            - img "image" [ref=e153]
+          - link "image" [ref=e155] [cursor=pointer]:
+            - /url: /search?text=Ethnic%20Wear%20-%20Shop%20all%20:relevance:list:listId_ea75fe58ecdf4058898f36e03c8ab3d3&richplp=indian-wear-overall-hybrid-plp
+            - img "image" [ref=e158]
+          - link "image" [ref=e160] [cursor=pointer]:
+            - /url: /search/page-1?q=casual+wear+for+men%3Arelevance%3Alist%3AlistId_fff67c5f1147479baf12bb4a333f756e%3AinStockFlag%3Atrue%3AisDiscountedPrice%3A%25E2%2582%25B939%252E5-%25E2%2582%25B9100
+            - img "image" [ref=e163]
+          - link "image" [ref=e165] [cursor=pointer]:
+            - /url: /search?text=Overall%20Lingerie:relevance:list:listId_4ebd063e5f3545f48d0aa128194c9482
+            - img "image" [ref=e168]
+          - link "image" [ref=e170] [cursor=pointer]:
+            - /url: /kids/c-msh21/page-1?q=%3Arelevance%3Acategory%3AMSH21%3AinStockFlag%3Atrue&icid2=quic:qul:main:hmp:m21:mulb:best:08:R1:clp:Bx:010
+            - img "image" [ref=e173]
+          - link "image" [ref=e175] [cursor=pointer]:
+            - /url: /search?text=Footwear%20Men:relevance:list:listId_4c36d5da26a94b1a8f7fb1df194699a8
+            - img "image" [ref=e178]
+          - link "image" [ref=e180] [cursor=pointer]:
+            - /url: /search?text=Footwear%20Women:relevance:list:listId_1eecaa08fc1947aebcbe4b1b14ca0735
+            - img "image" [ref=e183]
+          - link "image" [ref=e185] [cursor=pointer]:
+            - /url: /search?text=Watches:relevance:list:listId_89e76c1c864c40a8ae3c174f693abdaa
+            - img "image" [ref=e188]
+          - link "image" [ref=e190] [cursor=pointer]:
+            - /url: /search?q=handbags+overall%3Arelevance%3Alist%3AlistId_5b36e0e2d638405f8732f32b1138995d%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+            - img "image" [ref=e193]
+          - link "image" [ref=e195] [cursor=pointer]:
+            - /url: /search/page-1?q=eyewear-overall:relevance:list:listId_5b0b69794b724be9ac8a3f27a7a9ad08:inStockFlag:true:category:MSH2416
+            - img "image" [ref=e198]
+          - link "image" [ref=e200] [cursor=pointer]:
+            - /url: /search?text=Trolley%20%26%20Luggage:relevance:list:listId_86528dbbd3314c069973b9c9ddb73606
+            - img "image" [ref=e203]
+          - link "image" [ref=e205] [cursor=pointer]:
+            - /url: /search/page-1?q=gadgets%3Arelevance%3Alist%3AlistId_8989ae6f077b42bda42f80caaa428754%3AinStockFlag%3Atrue
+            - img "image" [ref=e208]
+          - link "image" [ref=e210] [cursor=pointer]:
+            - /url: /search?text=Health%20%26%20Wellness:relevance:list:listId_ff9a805ea90241df9bea518a0e3b0690
+            - img "image" [ref=e213]
+          - link "image" [ref=e215] [cursor=pointer]:
+            - /url: /search?text=Jewellery:relevance:list:listId_5c7bbb367ae24e669c55c201b83ae782
+            - img "image" [ref=e218]
+          - link "image" [ref=e220] [cursor=pointer]:
+            - /url: /home/c-msh22/page-1?q=%3Arelevance%3Acategory%3AMSH22%3AinStockFlag%3Atrue
+            - img "image" [ref=e223]
+          - link "image" [ref=e225] [cursor=pointer]:
+            - /url: /beauty-&-grooming/c-msh25/page-1?q=%3Arelevance%3Acategory%3AMSH25%3AinStockFlag%3Atrue%3AisLuxuryProduct%3Afalse
+            - img "image" [ref=e228]
+          - link "image" [ref=e230] [cursor=pointer]:
+            - /url: /search?text=Coins,%20Bars,%20Stones-Gold:relevance:list:listId_9b76631e219841459f507c6d3c376cc6&richplp=coins-hybrid-plp
+            - img "image" [ref=e233]
+      - generic [ref=e235]:
+        - link "image" [ref=e237] [cursor=pointer]:
+          - /url: /terms/hsbcfashion-offer-tnc
+          - img "image" [ref=e240]
+        - link "image" [ref=e242] [cursor=pointer]:
+          - /url: /deutsche-bank-new-tnc?cms=cft
+          - img "image" [ref=e245]
+        - link "image" [ref=e247] [cursor=pointer]:
+          - /url: /terms/au-bank-tnc
+          - img "image" [ref=e250]
+        - link "image" [ref=e252] [cursor=pointer]:
+          - /url: /one-card-lt-emi-offer
+          - img "image" [ref=e255]
+        - link "image" [ref=e257] [cursor=pointer]:
+          - /url: /terms/jandk-bank-tnc
+          - img "image" [ref=e260]
+        - link "image" [ref=e262] [cursor=pointer]:
+          - /url: /terms/amex-tnc
+          - img "image" [ref=e265]
+        - link "image" [ref=e267] [cursor=pointer]:
+          - /url: /terms/dbs-bank-tnc
+          - img "image" [ref=e270]
+      - generic [ref=e271]:
+        - heading "Brand Spotlight" [level=2] [ref=e273]
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - link "image MIN. 50% + 12% OFF*" [ref=e277] [cursor=pointer]:
+              - /url: /search?text=Daali:relevance:list:listId_023876147fff4f1189c287ec09c939df
+              - generic [ref=e278]:
+                - img "image" [ref=e280]
+                - generic [ref=e282]: MIN. 50% + 12% OFF*
+            - link "image MIN. 50% OFF" [ref=e284] [cursor=pointer]:
+              - /url: /search/page-1?q=best%20deals%20-libas%3Arelevance%3Alist%3AlistId_7efb7f10cd5340febf29c4e5cb9e3c43%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25%20-%2070%25%3AdiscountFlag%3A70%25%20and%20more%3Adisplay-classification%3AAnarkali%20Set%3Adisplay-classification%3AAnarkali%20Sets%3Adisplay-classification%3AKurta%20Bottom%20Dupatta%20Set%3Adisplay-classification%3AKurta%20Bottom%20Set%3Adisplay-classification%3AKurta%20Set%3Adisplay-classification%3AKurta%20Sets%3Adisplay-classification%3AKurta%20set%3Adisplay-classification%3AKurta%20and%20Pant%20Set%20With%20Dupatta%3Adisplay-classification%3AKurta%20and%20Pant%20with%20Dupatta%3Adisplay-classification%3AKurta%3Adisplay-classification%3AKurtas%3Adisplay-classification%3AKurti%3Adisplay-classification%3AKurtis%3Adisplay-classification%3ASaree%20with%20Unstitched%20Blouse%3Adisplay-classification%3APalazzo%20Sets%3Adisplay-classification%3AKurta%20and%20Palazzo%20with%20Dupatta%3Adisplay-classification%3ADress
+              - generic [ref=e285]:
+                - img "image" [ref=e287]
+                - generic [ref=e289]: MIN. 50% OFF
+            - link "image UNDER ₹999" [ref=e291] [cursor=pointer]:
+              - /url: /search?text=Rangmanch%20By%20Pantaloons:relevance:list:listId_04ec08db7f624dd1abd8938acd83bbb4
+              - generic [ref=e292]:
+                - img "image" [ref=e294]
+                - generic [ref=e296]: UNDER ₹999
+            - link "image UP TO 50% OFF" [ref=e298] [cursor=pointer]:
+              - /url: /beauty-&-grooming/c-msh25/page-1?q=%3Arelevance%3Acategory%3AMSH25%3AinStockFlag%3Atrue%3AisLuxuryProduct%3Afalse%3Abrand%3AMBH22B12699%3Abrand%3AMBH22B12700
+              - generic [ref=e299]:
+                - img "image" [ref=e301]
+                - generic [ref=e303]: UP TO 50% OFF
+            - link "image MIN. 30% OFF" [ref=e305] [cursor=pointer]:
+              - /url: /search?q=w+aurelia+curated+link%3Arelevance%3Alist%3AlistId_d481c3d7d13742219d8af1a2947ae092%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A10%25+-+30%25%3AdiscountFlag%3AUpto%2B10%2525
+              - generic [ref=e306]:
+                - img "image" [ref=e308]
+                - generic [ref=e310]: MIN. 30% OFF
+            - link "image UP TO 20% OFF" [ref=e312] [cursor=pointer]:
+              - /url: /search?text=Bioderma:relevance:list:listId_c523519acf544edb91ed7780bce74ce3
+              - generic [ref=e313]:
+                - img "image" [ref=e315]
+                - generic [ref=e317]: UP TO 20% OFF
+            - link "image MIN. 40% OFF" [ref=e319] [cursor=pointer]:
+              - /url: /search?text=Vero%20Moda:relevance:list:listId_43ec9d77e89640a8944ca7a92adf975b%3AisDiscountedPrice%3A%25E2%2582%25B939%252E5-%25E2%2582%25B9100
+              - generic [ref=e320]:
+                - img "image" [ref=e322]
+                - generic [ref=e324]: MIN. 40% OFF
+            - link "image EXPLORE NOW" [ref=e326] [cursor=pointer]:
+              - /url: /search?text=Enamor%20Lingerie:relevance:list:listId_1e4130e226b245e39ad24e6b5dcc8c76
+              - generic [ref=e327]:
+                - img "image" [ref=e329]
+                - generic [ref=e331]: EXPLORE NOW
+            - link "image UP TO 50% OFF" [ref=e333] [cursor=pointer]:
+              - /url: /search?text=Aldo%20and%20Guess:relevance:list:listId_98e66304ec4045c7a62e40262b97443a
+              - generic [ref=e334]:
+                - img "image" [ref=e336]
+                - generic [ref=e338]: UP TO 50% OFF
+            - link "image UP TO 85% OFF" [ref=e340] [cursor=pointer]:
+              - /url: /search?text=Zavya:relevance:list:listId_b359cd5a6302404d9f3a5b217bb8e36f
+              - generic [ref=e341]:
+                - img "image" [ref=e343]
+                - generic [ref=e345]: UP TO 85% OFF
+            - link "image UP TO 40% OFF" [ref=e347] [cursor=pointer]:
+              - /url: /hair/c-msh2513/?q=%3Arelevance%3Acategory%3AMSH2513%3AinStockFlag%3Atrue%3AisLuxuryProduct%3Afalse%3Abrand%3AMBH22B12320%3Abrand%3AMBH22B12887
+              - generic [ref=e348]:
+                - img "image" [ref=e350]
+                - generic [ref=e352]: UP TO 40% OFF
+            - link "image MIN. 50% OFF" [ref=e354] [cursor=pointer]:
+              - /url: /search?q=inc%205%20footwear:relevance:list:listId_984cfba80c3c4da383308d9a07798e3a:inStockFlag:true:discountFlag:50%25%20-%2070%25:discountFlag:70%25%20and+more:category:MSH1310
+              - generic [ref=e355]:
+                - img "image" [ref=e357]
+                - generic [ref=e359]: MIN. 50% OFF
+            - link "image UP TO 65% + 5% OFF*" [ref=e361] [cursor=pointer]:
+              - /url: /search?text=PRESTIGE%20%26%20BERGNER:relevance:list:listId_3674ae3ee2304131bcf12c08c2ad7d5a
+              - generic [ref=e362]:
+                - img "image" [ref=e364]
+                - generic [ref=e366]: UP TO 65% + 5% OFF*
+          - button [ref=e367] [cursor=pointer]:
+            - img [ref=e368]
+      - generic [ref=e372]:
+        - generic [ref=e373]:
+          - link "image MIN. 40% + 15% OFF*" [ref=e375] [cursor=pointer]:
+            - /url: /search?q=uspa:relevance:list:listId_91076a7886f54abba4595fb890d3eac1:inStockFlag:true:category:MSH11%3AisDiscountedPrice%3A%25E2%2582%25B929%252E5-%25E2%2582%25B9100&richplp=uspa-mens-hyb-plp
+            - generic [ref=e376]:
+              - img "image" [ref=e378]
+              - generic [ref=e380]: MIN. 40% + 15% OFF*
+          - link "image MIN. 40% + 12% OFF*" [ref=e382] [cursor=pointer]:
+            - /url: /search?text=Hoversoul:relevance:list:listId_b7761ead036b46fba18d377f93e00eee
+            - generic [ref=e383]:
+              - img "image" [ref=e385]
+              - generic [ref=e387]: MIN. 40% + 12% OFF*
+          - link "image MIN. 30% OFF" [ref=e389] [cursor=pointer]:
+            - /url: /search?q=levis%3Arelevance%3Alist%3AlistId_982c6952f1b64c12a0708e4bed46eeb2%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%2525%2B-%2B70%2525&richplp=levis-hybrid
+            - generic [ref=e390]:
+              - img "image" [ref=e392]
+              - generic [ref=e394]: MIN. 30% OFF
+          - link "image UP TO 30% OFF" [ref=e396] [cursor=pointer]:
+            - /url: /search?q=nike%20footwear:relevance:list:listId_7bd910a92737426980b3fd5ec30a86d0:inStockFlag:true:category:MSH1311
+            - generic [ref=e397]:
+              - img "image" [ref=e399]
+              - generic [ref=e401]: UP TO 30% OFF
+          - link "image UNDER ₹1,299 + 5% OFF*" [ref=e403] [cursor=pointer]:
+            - /url: /search?q=wrogn%3Arelevance%3Alist%3AlistId_1212de068484421a941436388093e4de%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+            - generic [ref=e404]:
+              - img "image" [ref=e406]
+              - generic [ref=e408]: UNDER ₹1,299 + 5% OFF*
+          - link "image 30% - 60% OFF" [ref=e410] [cursor=pointer]:
+            - /url: /search?q=adidas+footwear%3Arelevance%3Alist%3AlistId_e82c9d4e982b4ce9bb37e4aa263e759b%3AinStockFlag%3Atrue%3Acategory%3AMSH13%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+            - generic [ref=e411]:
+              - img "image" [ref=e413]
+              - generic [ref=e415]: 30% - 60% OFF
+          - link "image UP TO 25% OFF" [ref=e417] [cursor=pointer]:
+            - /url: /search?q=overall+fragrance%3Arelevance%3Alist%3AlistId_f4e7e37fd55946cda13ba146851e902a%3AinStockFlag%3Atrue%3Agenderbeauty-classification%3AMen%3Agenderbeauty-classification%3AUnisex
+            - generic [ref=e418]:
+              - img "image" [ref=e420]
+              - generic [ref=e422]: UP TO 25% OFF
+          - generic "Click to view more" [ref=e424]:
+            - generic [ref=e425]:
+              - img "image" [ref=e427]
+              - generic [ref=e429]: MIN. 30% OFF
+          - link "image UP TO 40% OFF" [ref=e431] [cursor=pointer]:
+            - /url: /search?q=asics+shoes%3Arelevance%3Alist%3AlistId_4cf8d18b1bb941ea8fe408293b3805b5%3AinStockFlag%3Atrue%3AdiscountAll%3ADiscounted%2BItems
+            - generic [ref=e432]:
+              - img "image" [ref=e434]
+              - generic [ref=e436]: UP TO 40% OFF
+          - link "image UP TO 20% OFF" [ref=e438] [cursor=pointer]:
+            - /url: /search/?searchCategory=all&text=Kimirica
+            - generic [ref=e439]:
+              - img "image" [ref=e441]
+              - generic [ref=e443]: UP TO 20% OFF
+          - link "image MIN. 30% OFF" [ref=e445] [cursor=pointer]:
+            - /url: /search?q=tommy+hilfiger+ucb+aeropostale%3Arelevance%3Alist%3AlistId_3c70298cbe0541a28fbd7f4658221635%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+            - generic [ref=e446]:
+              - img "image" [ref=e448]
+              - generic [ref=e450]: MIN. 30% OFF
+          - link "image UP TO 40% OFF" [ref=e452] [cursor=pointer]:
+            - /url: /search/?q=asbah%20professional:relevance:inStockFlag:true:category:MSH2517100
+            - generic [ref=e453]:
+              - img "image" [ref=e455]
+              - generic [ref=e457]: UP TO 40% OFF
+          - link "image FLAT 25% OFF" [ref=e459] [cursor=pointer]:
+            - /url: /search?text=DDecor:relevance:list:listId_91b5ce2f47004848a7e2e24683aab139&richplp=home-ddecor-hybrid-plp
+            - generic [ref=e460]:
+              - img "image" [ref=e462]
+              - generic [ref=e464]: FLAT 25% OFF
+        - button [ref=e465] [cursor=pointer]:
+          - img [ref=e466]
+      - generic [ref=e469]:
+        - heading "On Our Radar" [level=2] [ref=e471]
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - link "image" [ref=e475] [cursor=pointer]:
+              - /url: /search?text=Westside%20Kurtas%20%26%20Suit%20Sets%20Discounted:relevance:list:listId_4cccb570d89f49a09c676fcd4bd0aa7b
+              - img "image" [ref=e478]
+            - link "image" [ref=e480] [cursor=pointer]:
+              - /url: /search?text=Westside%20Dresses:relevance:list:listId_ceea4b47346e4df0bd117b12b58f71cd
+              - img "image" [ref=e483]
+            - link "image" [ref=e485] [cursor=pointer]:
+              - /url: /search?text=Westside%20Men%27s%20Casualwear%20Discounted:relevance:list:listId_33056378700e4101ad03ba8c764b3441
+              - img "image" [ref=e488]
+            - link "image" [ref=e490] [cursor=pointer]:
+              - /url: /search?text=Westside%20Tops%20and%20Tees:relevance:list:listId_108b388ddac44f15a7c9597424196867
+              - img "image" [ref=e493]
+            - link "image" [ref=e495] [cursor=pointer]:
+              - /url: /search?text=Westside%20Formal%20Wear%20Discounted:relevance:list:listId_9f5bec9c685c47859f942c3bec70b9d1
+              - img "image" [ref=e498]
+            - link "image" [ref=e500] [cursor=pointer]:
+              - /url: /search?text=Westside%20Lingerie%20%26%20Sleepwear%20Discounted:relevance:list:listId_c2d1f777f98a499f8861084e1c3a84a7
+              - img "image" [ref=e503]
+            - link "image" [ref=e505] [cursor=pointer]:
+              - /url: /search?text=Westside%20Bottomwear%20Discounted:relevance:list:listId_d511fc0b53984c5ca0142102994d56de
+              - img "image" [ref=e508]
+            - link "image" [ref=e510] [cursor=pointer]:
+              - /url: /search?text=Westside%20Kidswear%20Discounted:relevance:list:listId_224e50d13bee4b04aace4f69d1d94c98
+              - img "image" [ref=e513]
+            - link "image" [ref=e515] [cursor=pointer]:
+              - /url: /search?text=Westside%20Footwear%20Discounted:relevance:list:listId_9d8f83d9aa1a42b695164ffcdac1e611
+              - img "image" [ref=e518]
+          - button [ref=e519] [cursor=pointer]:
+            - img [ref=e520]
+      - generic [ref=e523]:
+        - heading "Her Indianwear Era" [level=2] [ref=e525]
+        - generic [ref=e527]:
+          - link "image MIN. 30% OFF" [ref=e529] [cursor=pointer]:
+            - /url: /search?q=biba+soch+curated+link%3Arelevance%3Alist%3AlistId_288552ed342540208d47feb0ba2be649%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+            - generic [ref=e530]:
+              - img "image" [ref=e532]
+              - generic [ref=e534]: MIN. 30% OFF
+          - link "image MIN. 50% + 12% OFF*" [ref=e536] [cursor=pointer]:
+            - /url: /search?text=Daali%20Eid%20Special:relevance:list:listId_aaee564b2a6449a2a68b9bb979887261&richplp=daali-hybrid&rcms=cft
+            - generic [ref=e537]:
+              - img "image" [ref=e539]
+              - generic [ref=e541]: MIN. 50% + 12% OFF*
+          - link "image MIN. 50% OFF" [ref=e543] [cursor=pointer]:
+            - /url: /search?q=varanga%3Arelevance%3Alist%3AlistId_12b83614e65645aabfa6f05bbc06bde8%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+            - generic [ref=e544]:
+              - img "image" [ref=e546]
+              - generic [ref=e548]: MIN. 50% OFF
+          - link "image MIN. 30% OFF" [ref=e550] [cursor=pointer]:
+            - /url: /search?q=w+aurelia+curated+link%3Arelevance%3Alist%3AlistId_d481c3d7d13742219d8af1a2947ae092%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A10%25+-+30%25%3AdiscountFlag%3AUpto%2B10%2525
+            - generic [ref=e551]:
+              - img "image" [ref=e553]
+              - generic [ref=e555]: MIN. 30% OFF
+          - link "image UNDER ₹999" [ref=e557] [cursor=pointer]:
+            - /url: /search?text=Rangmanch%20By%20Pantaloons:relevance:list:listId_04ec08db7f624dd1abd8938acd83bbb4
+            - generic [ref=e558]:
+              - img "image" [ref=e560]
+              - generic [ref=e562]: UNDER ₹999
+      - generic [ref=e563]:
+        - heading "The Fashion Forecast" [level=2] [ref=e565]
+        - generic [ref=e566]:
+          - generic [ref=e567]:
+            - link "image MIN. 30% + 15% OFF*" [ref=e569] [cursor=pointer]:
+              - /url: /search?q=forever+new%3Arelevance%3Alist%3AlistId_738782a1d5d846aa88c3314b630bbdae%3AinStockFlag%3Atrue%3AdiscountAll%3ADiscounted%2BItems&richplp=forever-new-hybrid-plp&rcms=cft
+              - generic [ref=e570]:
+                - img "image" [ref=e572]
+                - generic [ref=e574]: MIN. 30% + 15% OFF*
+            - link "image FLAT 35% + 10% OFF*" [ref=e576] [cursor=pointer]:
+              - /url: /womens-clothing-western-wear/c-msh1016?q=%3Arelevance%3Acategory%3AMSH1016%3AinStockFlag%3Atrue%3Abrand%3AMBH11A00077
+              - generic [ref=e577]:
+                - img "image" [ref=e579]
+                - generic [ref=e581]: FLAT 35% + 10% OFF*
+            - link "image UP TO 60% OFF" [ref=e583] [cursor=pointer]:
+              - /url: /womens-clothing-western-wear/c-msh1016?q=%3Arelevance%3Acategory%3AMSH1016%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10366
+              - generic [ref=e584]:
+                - img "image" [ref=e586]
+                - generic [ref=e588]: UP TO 60% OFF
+            - link "image UNDER ₹999" [ref=e590] [cursor=pointer]:
+              - /url: /search?q=pantaloons%3Arelevance%3Alist%3AlistId_c0b38eb1f1db46a9ad365c09d86c5a51%3AinStockFlag%3Atrue%3Acategory%3AMSH1016%3Aprice%3A%E2%82%B90-%E2%82%B9999
+              - generic [ref=e591]:
+                - img "image" [ref=e593]
+                - generic [ref=e595]: UNDER ₹999
+            - link "image UP TO 70% OFF" [ref=e597] [cursor=pointer]:
+              - /url: /search/page-1?q=u.s.polo%20assn:relevance:list:listId_2d1a0728a88a4a9893c9f3eef33e527a:inStockFlag:true:category:MSH1016
+              - generic [ref=e598]:
+                - img "image" [ref=e600]
+                - generic [ref=e602]: UP TO 70% OFF
+            - link "image UP TO 50% OFF" [ref=e604] [cursor=pointer]:
+              - /url: /women's-clothing/c-msh10?q=%3Arelevance%3Acategory%3AMSH10%3AinStockFlag%3Atrue%3Abrand%3AMBH11B28752%3AdiscountAll%3ADiscounted%2BItems
+              - generic [ref=e605]:
+                - img "image" [ref=e607]
+                - generic [ref=e609]: UP TO 50% OFF
+          - button [ref=e610] [cursor=pointer]:
+            - img [ref=e611]
+      - generic [ref=e614]:
+        - heading "The Men’s Edit" [level=2] [ref=e616]
+        - generic [ref=e617]:
+          - generic [ref=e618]:
+            - link "image MIN. 30% OFF" [ref=e620] [cursor=pointer]:
+              - /url: /search?q=louis+philippe%3Arelevance%3Alist%3AlistId_6f1f6f198e1749148953a97833517ca1%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%C2%A0%3AdiscountFlag%3A50%25+-+70%25%C2%A0%3Abrand%3AMBH11A00078%3Abrand%3AMBH11B10859%3Abrand%3AMBH11B10860%C2%A0%3Abrand%3AMBH11B10860%3AdiscountFlag%3A50%2525%2B-%2B70%2525&richplp=louis-philippe-hybrid-plp
+              - generic [ref=e621]:
+                - img "image" [ref=e623]
+                - generic [ref=e625]: MIN. 30% OFF
+            - link "image MIN. 40% OFF" [ref=e627] [cursor=pointer]:
+              - /url: /search?q=the+bear+house%3Arelevance%3Alist%3AlistId_b9635f5fe89b44bc8d5a893c99599544%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10247%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A30%2525%2B-%2B50%2525&richplp=the-bear-house-hybrid
+              - generic [ref=e628]:
+                - img "image" [ref=e630]
+                - generic [ref=e632]: MIN. 40% OFF
+            - link "image MIN. 30% + 20% OFF*" [ref=e634] [cursor=pointer]:
+              - /url: /search?q=arrow%3Arelevance%3Alist%3AlistId_b155c42c95174636a7a1ad729b58ddea%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A30%2525%2B-%2B50%2525&richplp=arrow-hybrid-plp-25
+              - generic [ref=e635]:
+                - img "image" [ref=e637]
+                - generic [ref=e639]: MIN. 30% + 20% OFF*
+            - link "image MIN. 50% + 10% OFF*" [ref=e641] [cursor=pointer]:
+              - /url: /search?q=puma%3Arelevance%3Alist%3AlistId_37f4cd2bcc6c4f8fbbc2b7ce7c9c8d03%3AinStockFlag%3Atrue%3Acategory%3AMSH11%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore&richplp=puma-hybrid&rcms=cft
+              - generic [ref=e642]:
+                - img "image" [ref=e644]
+                - generic [ref=e646]: MIN. 50% + 10% OFF*
+            - link "image MIN. 50% OFF" [ref=e648] [cursor=pointer]:
+              - /url: /search?q=spykar%3Arelevance%3Alist%3AlistId_b7a726ec52b8473ba3b774775ccc11b9%3AinStockFlag%3Atrue%3Abrand%3AMBH11A00100%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore&richplp=skypar-men-hplp
+              - generic [ref=e649]:
+                - img "image" [ref=e651]
+                - generic [ref=e653]: MIN. 50% OFF
+            - generic "Click to view more" [ref=e655]:
+              - generic [ref=e656]:
+                - img "image" [ref=e658]
+                - generic [ref=e660]: UP TO 50% OFF
+            - link "image UP TO 30% OFF" [ref=e662] [cursor=pointer]:
+              - /url: /search?q=damensch%3Arelevance%3Alist%3AlistId_31d586a2c2b745f596935ca9f8b7c1fc%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10482
+              - generic [ref=e663]:
+                - img "image" [ref=e665]
+                - generic [ref=e667]: UP TO 30% OFF
+          - button [ref=e668] [cursor=pointer]:
+            - img [ref=e669]
+      - generic [ref=e672]:
+        - heading "Step Into Now" [level=2] [ref=e674]
+        - generic [ref=e676]:
+          - link "image UP TO 60% OFF" [ref=e678] [cursor=pointer]:
+            - /url: /search/?q=puma:relevance:inStockFlag:true:category:MSH1320
+            - generic [ref=e679]:
+              - img "image" [ref=e681]
+              - generic [ref=e683]: UP TO 60% OFF
+          - link "image UP TO 50% OFF" [ref=e685] [cursor=pointer]:
+            - /url: /search?q=skechers+shoes%3Arelevance%3Alist%3AlistId_ef95d1b1b619498695270e04df9659b2%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+            - generic [ref=e686]:
+              - img "image" [ref=e688]
+              - generic [ref=e690]: UP TO 50% OFF
+          - link "image UP TO 60% OFF" [ref=e692] [cursor=pointer]:
+            - /url: /search?text=Metro%20%26%20Mochi:relevance:list:listId_8d5b55a2dfa5498185ba7e31859a829d
+            - generic [ref=e693]:
+              - img "image" [ref=e695]
+              - generic [ref=e697]: UP TO 60% OFF
+          - link "image UP TO 70% OFF" [ref=e699] [cursor=pointer]:
+            - /url: /search?q=aldo+overall%3Arelevance%3Alist%3AlistId_9cf79484a9a34adc83a50ee546e45cf0%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+            - generic [ref=e700]:
+              - img "image" [ref=e702]
+              - generic [ref=e704]: UP TO 70% OFF
+          - link "image UP TO 50% + 10% OFF*" [ref=e706] [cursor=pointer]:
+            - /url: /search?q=new+balance+shoes%3Arelevance%3Alist%3AlistId_cb7774c3099342e29175ec66125acfbe%3AinStockFlag%3Atrue%3AdiscountAll%3ADiscounted%2BItems
+            - generic [ref=e707]:
+              - img "image" [ref=e709]
+              - generic [ref=e711]: UP TO 50% + 10% OFF*
+      - generic [ref=e712]:
+        - heading "Glow Got Real" [level=2] [ref=e714]
+        - generic [ref=e715]:
+          - generic [ref=e716]:
+            - link "image" [ref=e718] [cursor=pointer]:
+              - /url: /search?text=Lipsticks:relevance:list:listId_d0ad87498f504bafb2ddf77c7aec0e73
+              - img "image" [ref=e721]
+            - link "image" [ref=e723] [cursor=pointer]:
+              - /url: /search?q=kajal%3Arelevance%3Alist%3AlistId_ea032d087be540c89cbb3c270cf4d7cb%3AinStockFlag%3Atrue%3Abrand%3AMBH22B13964%3Abrand%3AMBH22B27594%3Abrand%3AMBH22B12723%3Abrand%3AMBH22B12722%3Abrand%3AMBH22B27632%3Abrand%3AMBH22B13773%3Abrand%3AMBH22B13857%3Abrand%3AMBH22B12721%3Abrand%3AMBH22B27097%3Abrand%3AMBH22B26228%3Abrand%3AMBH22B12320%3Abrand%3AMBH22B12699%3Abrand%3AMBH22B25745%3Abrand%3AMBH22B26557%3Abrand%3AMBH22B12700%3Abrand%3AMBH22B15605%3Abrand%3AMBH22B13392%3Abrand%3AMBH22B12736%3Abrand%3AMBH22B12329%3Abrand%3AMBH22B12733%3Abrand%3AMBH22B25674
+              - img "image" [ref=e726]
+            - link "image" [ref=e728] [cursor=pointer]:
+              - /url: /search?text=Face%20Creams:relevance:list:listId_466961a5cb8a4073b1338e02e7717f5f
+              - img "image" [ref=e731]
+            - link "image" [ref=e733] [cursor=pointer]:
+              - /url: /search?text=Serums:relevance:list:listId_d45e317c590f4f51b8ee364f5a758858
+              - img "image" [ref=e736]
+            - link "image" [ref=e738] [cursor=pointer]:
+              - /url: /search?text=Suncare:relevance:list:listId_f94c91e8048d45a592a59fe72357fc7a
+              - img "image" [ref=e741]
+            - link "image" [ref=e743] [cursor=pointer]:
+              - /url: /search?text=Shampoo%20%26%20Conditioner:relevance:list:listId_883b3a8449b34783bcbaf9ae4fb7815c
+              - img "image" [ref=e746]
+            - link "image" [ref=e748] [cursor=pointer]:
+              - /url: /search?text=Bath%20Body%20and%20Hygeine:relevance:list:listId_28ec9dab21544a95a430fb0172489b2c
+              - img "image" [ref=e751]
+            - link "image" [ref=e753] [cursor=pointer]:
+              - /url: /search?text=Holistics%20Nutrition:relevance:list:listId_29a14fabab70482482d35ff2266559db
+              - img "image" [ref=e756]
+            - link "image" [ref=e758] [cursor=pointer]:
+              - /url: /search?text=Tools%20and%20Accessories:relevance:list:listId_a24511e9e84e46ccbbcb47baee62c1cc
+              - img "image" [ref=e761]
+            - link "image" [ref=e763] [cursor=pointer]:
+              - /url: /search?q=overall%20fragrance:relevance:list:listId_f4e7e37fd55946cda13ba146851e902a:inStockFlag:true:category:MSH2511100104
+              - img "image" [ref=e766]
+            - link "image" [ref=e768] [cursor=pointer]:
+              - /url: /search/?q=lip%20balm:relevance:inStockFlag:true:category:MSH2514102100
+              - img "image" [ref=e771]
+            - link "image" [ref=e773] [cursor=pointer]:
+              - /url: /search?text=Day%20regime%20Cleansing:relevance:list:listId_7cfc5f1f33654e6ea94414deee569a68
+              - img "image" [ref=e776]
+          - button [ref=e777] [cursor=pointer]:
+            - img [ref=e778]
+      - generic [ref=e781]:
+        - heading "Lingerie, Sorted" [level=2] [ref=e783]
+        - generic [ref=e784]:
+          - generic [ref=e785]:
+            - link "image STARTS AT ₹199" [ref=e787] [cursor=pointer]:
+              - /url: /search?q=jockey%3Arelevance%3Alist%3AlistId_7c7b7e9d2d9846899e2b86f03bc65f2a%3AinStockFlag%3Atrue%3Abrand%3AMBH11A00035&richplp=men-jockey-hybrid-plp
+              - generic [ref=e788]:
+                - img "image" [ref=e790]
+                - generic [ref=e792]: STARTS AT ₹199
+            - link "image UP TO 60% OFF" [ref=e794] [cursor=pointer]:
+              - /url: /inner-&-nightwear/c-msh1014/page-1?q=%3Arelevance%3AinStockFlag%3Atrue%3Acategory%3AMSH1014%3Abrand%3AMBH11A00032%3AdiscountAll%3ADiscounted%2BItems
+              - generic [ref=e795]:
+                - img "image" [ref=e797]
+                - generic [ref=e799]: UP TO 60% OFF
+            - link "image UP TO 70% + 10% OFF*" [ref=e801] [cursor=pointer]:
+              - /url: /women's-clothing/c-msh10/?q=%3Arelevance%3AinStockFlag%3Atrue%3Abrand%3AMBH11B15157%3Abrand%3AMBH11B14390%3Abrand%3AMBH11B10086:category:MSH10:brand:MBH11B15157:brand:MBH11B14390:brand:MBH11B10086:brand:MBH11A00397
+              - generic [ref=e802]:
+                - img "image" [ref=e804]
+                - generic [ref=e806]: UP TO 70% + 10% OFF*
+            - link "image UP TO 30% OFF" [ref=e808] [cursor=pointer]:
+              - /url: /search?q=damensch%3Arelevance%3Alist%3AlistId_31d586a2c2b745f596935ca9f8b7c1fc%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10482
+              - generic [ref=e809]:
+                - img "image" [ref=e811]
+                - generic [ref=e813]: UP TO 30% OFF
+            - link "image EXPLORE NOW" [ref=e815] [cursor=pointer]:
+              - /url: /search?text=Enamor%20Lingerie:relevance:list:listId_1e4130e226b245e39ad24e6b5dcc8c76
+              - generic [ref=e816]:
+                - img "image" [ref=e818]
+                - generic [ref=e820]: EXPLORE NOW
+            - link "image MIN. 30% OFF" [ref=e822] [cursor=pointer]:
+              - /url: /inner-&-nightwear/c-msh1014/?q=%3Arelevance%3AinStockFlag%3Atrue%3Acategory%3AMSH1014%3Abrand%3AMBH11A00353%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+              - generic [ref=e823]:
+                - img "image" [ref=e825]
+                - generic [ref=e827]: MIN. 30% OFF
+          - button [ref=e828] [cursor=pointer]:
+            - img [ref=e829]
+      - generic [ref=e832]:
+        - heading "Travel Starts Here" [level=2] [ref=e834]
+        - generic [ref=e835]:
+          - generic [ref=e836]:
+            - link "image UP TO 50% + 10% OFF*" [ref=e838] [cursor=pointer]:
+              - /url: /search?text=guess%20bags:relevance:list:listId_e4b84ac2018945e2b08c9152c3a503af
+              - generic [ref=e839]:
+                - img "image" [ref=e841]
+                - generic [ref=e843]: UP TO 50% + 10% OFF*
+            - link "image UP TO 60% OFF" [ref=e845] [cursor=pointer]:
+              - /url: /search?q=skybags+and+aristocrat%3Arelevance%3Alist%3AlistId_120c09687c354b2cac709cb155b8c51b%3AinStockFlag%3Atrue%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+              - generic [ref=e846]:
+                - img "image" [ref=e848]
+                - generic [ref=e850]: UP TO 60% OFF
+            - link "image UP TO 50% OFF" [ref=e852] [cursor=pointer]:
+              - /url: /search?q=lavie+and++lavie+sports%3Arelevance%3Alist%3AlistId_0e604379f39142b099ace34fbeaf7fcc%3AinStockFlag%3Atrue%3Abrand%3AMBH16B27861%3Abrand%3AMBH16W00122%3Abrand%3AMBH16B27459%3Abrand%3AMBH16B27842%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+              - generic [ref=e853]:
+                - img "image" [ref=e855]
+                - generic [ref=e857]: UP TO 50% OFF
+            - link "image UP TO 80% OFF" [ref=e859] [cursor=pointer]:
+              - /url: /search?q=nasher+miles%3Arelevance%3Alist%3AlistId_bf03900442e84218be9038470f96e618%3AinStockFlag%3Atrue%3AdiscountFlag%3A70%2525%2Band%2Bmore
+              - generic [ref=e860]:
+                - img "image" [ref=e862]
+                - generic [ref=e864]: UP TO 80% OFF
+            - link "image MIN. 30% OFF" [ref=e866] [cursor=pointer]:
+              - /url: /search?q=aldo+bags%3Arelevance%3Alist%3AlistId_866a6c01fbc64101971624c3f28494b8%3AinStockFlag%3Atrue%3AdiscountAll%3ADiscounted%2BItems
+              - generic [ref=e867]:
+                - img "image" [ref=e869]
+                - generic [ref=e871]: MIN. 30% OFF
+            - link "image UP TO 40% OFF" [ref=e873] [cursor=pointer]:
+              - /url: /search?q=uppercase%3Arelevance%3Alist%3AlistId_a6993ac270aa4e429aa7fcc2ae9dc5c0%3AinStockFlag%3Atrue%3AdiscountFlag%3A10%25+-+30%25%3AdiscountFlag%3A30%2525%2B-%2B50%2525
+              - generic [ref=e874]:
+                - img "image" [ref=e876]
+                - generic [ref=e878]: UP TO 40% OFF
+            - link "image UP TO 70% OFF" [ref=e880] [cursor=pointer]:
+              - /url: /search?q=vip%3Arelevance%3Alist%3AlistId_5ce399cb29c349cd8c530e4f2f128c7c%3AinStockFlag%3Atrue%3AdiscountFlag%3AUpto+10%25%3AdiscountFlag%3A10%25+-+30%25%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+              - generic [ref=e881]:
+                - img "image" [ref=e883]
+                - generic [ref=e885]: UP TO 70% OFF
+          - button [ref=e886] [cursor=pointer]:
+            - img [ref=e887]
+      - generic [ref=e890]:
+        - heading "Flex O'Clock" [level=2] [ref=e892]
+        - generic [ref=e893]:
+          - generic [ref=e894]:
+            - link "image MIN. 20% + 10% OFF*" [ref=e896] [cursor=pointer]:
+              - /url: /search?q=titan:relevance:list:listId_5d73effae36a4d298170f1094f46acfa:inStockFlag:true:category:MSH1500
+              - generic [ref=e897]:
+                - img "image" [ref=e899]
+                - generic [ref=e901]: MIN. 20% + 10% OFF*
+            - link "image UP TO 40% + 10% OFF*" [ref=e903] [cursor=pointer]:
+              - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH1501%3Abrand%3AMBH15B12822%3Abrand%3AMBH15W00206
+              - generic [ref=e904]:
+                - img "image" [ref=e906]
+                - generic [ref=e908]: UP TO 40% + 10% OFF*
+            - link "image STARTING AT ₹7,999" [ref=e910] [cursor=pointer]:
+              - /url: /search?q=fossil:relevance:list:listId_37e9b51b1e9049e89d3f4f87ba1e50b5:inStockFlag:true:category:MSH1500
+              - generic [ref=e911]:
+                - img "image" [ref=e913]
+                - generic [ref=e915]: STARTING AT ₹7,999
+            - link "image UP TO 40% + 7.5% OFF*" [ref=e917] [cursor=pointer]:
+              - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH1500%3Abrand%3AMBH15B11035%3Abrand%3AMBH15W00279
+              - generic [ref=e918]:
+                - img "image" [ref=e920]
+                - generic [ref=e922]: UP TO 40% + 7.5% OFF*
+            - link "image MIN. 50% + 10% OFF*" [ref=e924] [cursor=pointer]:
+              - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH1501%3Abrand%3AMBH15B10732%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore
+              - generic [ref=e925]:
+                - img "image" [ref=e927]
+                - generic [ref=e929]: MIN. 50% + 10% OFF*
+            - link "image UP TO 40% OFF" [ref=e931] [cursor=pointer]:
+              - /url: /search/page-1?q=watches%20eoss:relevance:list:listId_c729b9dd2d574f72826dba1938dadb2c:inStockFlag:true:category:MSH1500:brand:MBH15B10871
+              - generic [ref=e932]:
+                - img "image" [ref=e934]
+                - generic [ref=e936]: UP TO 40% OFF
+            - link "image UP TO 55% + 10% OFF*" [ref=e938] [cursor=pointer]:
+              - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH15%3Abrand%3AMBH15B10683
+              - generic [ref=e939]:
+                - img "image" [ref=e941]
+                - generic [ref=e943]: UP TO 55% + 10% OFF*
+            - link "image UP TO 40% OFF" [ref=e945] [cursor=pointer]:
+              - /url: /search/page-1?q=watches+eoss%3Arelevance%3Alist%3AlistId_c729b9dd2d574f72826dba1938dadb2c%3AinStockFlag%3Atrue%3Acategory%3AMSH15%3Abrand%3AMBH15F00052
+              - generic [ref=e946]:
+                - img "image" [ref=e948]
+                - generic [ref=e950]: UP TO 40% OFF
+          - button [ref=e951] [cursor=pointer]:
+            - img [ref=e952]
+      - generic [ref=e955]:
+        - heading "Shine Stayed On" [level=2] [ref=e957]
+        - generic [ref=e958]:
+          - generic [ref=e959]:
+            - link "image STARTS AT ₹4,999" [ref=e961] [cursor=pointer]:
+              - /url: /search?text=Mia%20by%20Tanishq:relevance:list:listId_459fad691dcb480fab1c1bd73b4ffa07&richplp=mia-by-tanishq-hybrid-plp
+              - generic [ref=e962]:
+                - img "image" [ref=e964]
+                - generic [ref=e966]: STARTS AT ₹4,999
+            - link "image MIN. 50% OFF" [ref=e968] [cursor=pointer]:
+              - /url: /search?text=Giva:relevance:list:listId_24eb886de29e4e09b6427b88a518a96f&richplp=giva-hybrid-plp
+              - generic [ref=e969]:
+                - img "image" [ref=e971]
+                - generic [ref=e973]: MIN. 50% OFF
+            - link "image UP TO 75% OFF*" [ref=e975] [cursor=pointer]:
+              - /url: /search?text=Zavya:relevance:list:listId_b359cd5a6302404d9f3a5b217bb8e36f
+              - generic [ref=e976]:
+                - img "image" [ref=e978]
+                - generic [ref=e980]: UP TO 75% OFF*
+            - link "image STARTS AT ₹4,999" [ref=e982] [cursor=pointer]:
+              - /url: /search?text=Malabar%20Gold%20and%20Diamonds:relevance:list:listId_ff4ea2dbca544920b6ef0e2329f03130
+              - generic [ref=e983]:
+                - img "image" [ref=e985]
+                - generic [ref=e987]: STARTS AT ₹4,999
+            - link "image UP TO 50% OFF" [ref=e989] [cursor=pointer]:
+              - /url: /search?text=Shaya%20by%20Caratlane:relevance:list:listId_ee1732c6348c4de88c506afb5aa9fd6a&richplp=shaya-brand-hybrid
+              - generic [ref=e990]:
+                - img "image" [ref=e992]
+                - generic [ref=e994]: UP TO 50% OFF
+            - link "image MIN. 70% + 20% OFF*" [ref=e996] [cursor=pointer]:
+              - /url: /search?text=Zaveri%20Pearls:relevance:list:listId_6a2b510fd04c4ceb8b79f1507c1f9c3e&richplp=zaveri-pearls-hybrid-plp
+              - generic [ref=e997]:
+                - img "image" [ref=e999]
+                - generic [ref=e1001]: MIN. 70% + 20% OFF*
+          - button [ref=e1002] [cursor=pointer]:
+            - img [ref=e1003]
+      - generic [ref=e1006]:
+        - heading "Living Levelled Up" [level=2] [ref=e1008]
+        - generic [ref=e1009]:
+          - generic [ref=e1010]:
+            - link "image MIN. 10% + 10% OFF*" [ref=e1012] [cursor=pointer]:
+              - /url: /search?q=prestige+%26+bergner%3Arelevance%3Alist%3AlistId_3674ae3ee2304131bcf12c08c2ad7d5a%3AinStockFlag%3Atrue%3AdiscountFlag%3A10%25+-+30%25%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+              - generic [ref=e1013]:
+                - img "image" [ref=e1015]
+                - generic [ref=e1017]: MIN. 10% + 10% OFF*
+            - link "image FLAT 20% + 10% OFF*" [ref=e1019] [cursor=pointer]:
+              - /url: /search?text=Monte%20Carlo%20Home:relevance:list:listId_3ce6582e596c4d9a89496e425f6aee50
+              - generic [ref=e1020]:
+                - img "image" [ref=e1022]
+                - generic [ref=e1024]: FLAT 20% + 10% OFF*
+            - link "image MIN. 50% + 10% OFF*" [ref=e1026] [cursor=pointer]:
+              - /url: /search?q=homesake%3Arelevance%3Alist%3AlistId_994214916355426ca5dfd4d216b3d42b%3AinStockFlag%3Atrue%3AdiscountFlag%3A50%25+-+70%25%3AdiscountFlag%3A70%2525%2Band%2Bmore&richplp=homesake-hybrid-plp
+              - generic [ref=e1027]:
+                - img "image" [ref=e1029]
+                - generic [ref=e1031]: MIN. 50% + 10% OFF*
+            - link "image MIN. 10% + 10% OFF*" [ref=e1033] [cursor=pointer]:
+              - /url: /search/?searchCategory=all&text=titan%20clock
+              - generic [ref=e1034]:
+                - img "image" [ref=e1036]
+                - generic [ref=e1038]: MIN. 10% + 10% OFF*
+            - link "image UP TO 75% + 10% OFF*" [ref=e1040] [cursor=pointer]:
+              - /url: /search?text=Godrej%20Interio%20%26%20Durian:relevance:list:listId_3f2d703817324083bf79244fb866caf7&richplp=durian-hybrid-plp
+              - generic [ref=e1041]:
+                - img "image" [ref=e1043]
+                - generic [ref=e1045]: UP TO 75% + 10% OFF*
+            - link "image UP TO 25% OFF" [ref=e1047] [cursor=pointer]:
+              - /url: /search?text=DDecor:relevance:list:listId_91b5ce2f47004848a7e2e24683aab139&richplp=home-ddecor-hybrid-plp
+              - generic [ref=e1048]:
+                - img "image" [ref=e1050]
+                - generic [ref=e1052]: UP TO 25% OFF
+            - link "image MIN. 10% + 10% OFF*" [ref=e1054] [cursor=pointer]:
+              - /url: /search?text=Goodhomes:relevance:list:listId_b6858555c99845f9b1dc91f34b77b98f&richplp=goodhomes-hybrid-plp&rcms=cft
+              - generic [ref=e1055]:
+                - img "image" [ref=e1057]
+                - generic [ref=e1059]: MIN. 10% + 10% OFF*
+            - link "image UP TO 50% + 10% OFF*" [ref=e1061] [cursor=pointer]:
+              - /url: /search?text=Borosil:relevance:list:listId_766ef35e4d6a4ea2bb0ec0a93a6cef80
+              - generic [ref=e1062]:
+                - img "image" [ref=e1064]
+                - generic [ref=e1066]: UP TO 50% + 10% OFF*
+            - link "image MIN. 30% + 10% OFF*" [ref=e1068] [cursor=pointer]:
+              - /url: /search?text=Urban%20Space:relevance:list:listId_046fe07cc7574ca19d3d639a860caa0d&richplp=urban-space-hybrid-plp
+              - generic [ref=e1069]:
+                - img "image" [ref=e1071]
+                - generic [ref=e1073]: MIN. 30% + 10% OFF*
+            - link "image UP TO 60% OFF" [ref=e1075] [cursor=pointer]:
+              - /url: /search?text=Madesa:relevance:list:listId_014b786481454ea2be736819b497e6f2
+              - generic [ref=e1076]:
+                - img "image" [ref=e1078]
+                - generic [ref=e1080]: UP TO 60% OFF
+          - button [ref=e1081] [cursor=pointer]:
+            - img [ref=e1082]
+      - generic [ref=e1085]:
+        - heading "Tiny, Big Energy" [level=2] [ref=e1087]
+        - generic [ref=e1088]:
+          - generic [ref=e1089]:
+            - link "image MIN. 30% OFF" [ref=e1091] [cursor=pointer]:
+              - /url: /search?q=kids+apparel+brands%3Arelevance%3Alist%3AlistId_19ea32a59aab48649ed4306d6455b4ac%3AinStockFlag%3Atrue%3Abrand%3AMBH11A00238%3Abrand%3AMBH11B27696%3AisDiscountedPrice%3A%25E2%2582%25B929%252E5-%25E2%2582%25B9100
+              - generic [ref=e1092]:
+                - img "image" [ref=e1094]
+                - generic [ref=e1096]: MIN. 30% OFF
+            - link "image UNDER ₹699" [ref=e1098] [cursor=pointer]:
+              - /url: /search?q=pantaloons%20kids%3Arelevance%3Alist%3AlistId_51deac00fc134effb97605f250ee77fa%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10591%3Abrand%3AMBH11B10592%3Aprice%3A%E2%82%B90-%E2%82%B9699
+              - generic [ref=e1099]:
+                - img "image" [ref=e1101]
+                - generic [ref=e1103]: UNDER ₹699
+            - link "image MIN. 30% OFF" [ref=e1105] [cursor=pointer]:
+              - /url: /search?text=Jack%20%26%20Jones%20Junior%20-%20Vero%20Moda%20Girls:relevance:list:listId_bceaa0561fe8453aa7aa71f9b1da9056
+              - generic [ref=e1106]:
+                - img "image" [ref=e1108]
+                - generic [ref=e1110]: MIN. 30% OFF
+            - link "image MIN. 40% OFF" [ref=e1112] [cursor=pointer]:
+              - /url: /kids/c-msh21/page-1?q=%3Arelevance%3Acategory%3AMSH21%3AinStockFlag%3Atrue%3Abrand%3AMBH11A00613%3Abrand%3AMBH11B27383
+              - generic [ref=e1113]:
+                - img "image" [ref=e1115]
+                - generic [ref=e1117]: MIN. 40% OFF
+            - link "image UP TO 70% OFF" [ref=e1119] [cursor=pointer]:
+              - /url: /kids/c-msh21/page-1?q=%3Arelevance%3Acategory%3AMSH21%3AinStockFlag%3Atrue%3Abrand%3AMBH11B10871%3Abrand%3AMBH11A00052%3Abrand%3AMBH11A00146%3Abrand%3AMBH11A00023
+              - generic [ref=e1120]:
+                - img "image" [ref=e1122]
+                - generic [ref=e1124]: UP TO 70% OFF
+            - link "image MIN. 50% OFF" [ref=e1126] [cursor=pointer]:
+              - /url: /search?q=infants+wear%3Arelevance%3Alist%3AlistId_64227d7f4cae4a5a9a5d29e3ea6b5c11%3AinStockFlag%3Atrue%3Abrand%3AMBH11B12655%3Abrand%3AMBH11B10161
+              - generic [ref=e1127]:
+                - img "image" [ref=e1129]
+                - generic [ref=e1131]: MIN. 50% OFF
+            - link "image STARTS AT ₹199" [ref=e1133] [cursor=pointer]:
+              - /url: /search?q=kids+activewear%3Arelevance%3Alist%3AlistId_ee7a481fe3b94d68b06805462bff50a9%3AinStockFlag%3Atrue%3Abrand%3AMBH11F00009%3Abrand%3AMBH11B27476%3Abrand%3AMBH11B27510%3Abrand%3AMBH11B27509%3Abrand%3AMBH11B27480%3Abrand%3AMBH11B27508%3Abrand%3AMBH11B27489%3Abrand%3AMBH11B27527%3Abrand%3AMBH11B27478%3Abrand%3AMBH11B27484%3Abrand%3AMBH11B27490%3Abrand%3AMBH11B27479%3Abrand%3AMBH11B27556%3Abrand%3AMBH11B27486%3Abrand%3AMBH11B27488%3Abrand%3AMBH11B27491%3Abrand%3AMBH11B27485
+              - generic [ref=e1134]:
+                - img "image" [ref=e1136]
+                - generic [ref=e1138]: STARTS AT ₹199
+            - link "image UP TO 40% OFF" [ref=e1140] [cursor=pointer]:
+              - /url: /kids/c-msh21/page-1?q=%3Arelevance%3Acategory%3AMSH21%3AinStockFlag%3Atrue%3AdiscountAll%3ADiscounted+Items%3Abrand%3AMBH11W00213%3Abrand%3AMBH11B27753%3AdiscountFlag%3A30%25+-+50%25%3AdiscountFlag%3A50%2525%2B-%2B70%2525
+              - generic [ref=e1141]:
+                - img "image" [ref=e1143]
+                - generic [ref=e1145]: UP TO 40% OFF
+            - link "image MIN. 40% OFF" [ref=e1147] [cursor=pointer]:
+              - /url: /search?q=kids+apparel+brands%3Arelevance%3Alist%3AlistId_19ea32a59aab48649ed4306d6455b4ac%3AinStockFlag%3Atrue%3Abrand%3AMBH11B11389%3Abrand%3AMBH11A00230%3AisDiscountedPrice%3A%25E2%2582%25B939%252E5-%25E2%2582%25B9100
+              - generic [ref=e1148]:
+                - img "image" [ref=e1150]
+                - generic [ref=e1152]: MIN. 40% OFF
+            - link "image UNDER ₹699" [ref=e1154] [cursor=pointer]:
+              - /url: /search?q=bolly%20lounge%20%26%20ed-a-mamma%3Arelevance%3Alist%3AlistId_2cb85eabdd674bf9a62e0d6bfe0431fa%3AinStockFlag%3Atrue%3Aprice%3A%E2%82%B90-%E2%82%B9699
+              - generic [ref=e1155]:
+                - img "image" [ref=e1157]
+                - generic [ref=e1159]: UNDER ₹699
+          - button [ref=e1160] [cursor=pointer]:
+            - img [ref=e1161]
+      - generic [ref=e1164]:
+        - heading "The Tech Space" [level=2] [ref=e1166]
+        - generic [ref=e1168]:
+          - link "image UP TO 65% OFF" [ref=e1170] [cursor=pointer]:
+            - /url: /search/page-1?q=gadgets%3Arelevance%3Alist%3AlistId_8989ae6f077b42bda42f80caaa428754%3AinStockFlag%3Atrue%3Abrand%3AMBH12B10816%3Abrand%3AMBH12E00016
+            - generic [ref=e1171]:
+              - img "image" [ref=e1173]
+              - generic [ref=e1175]: UP TO 65% OFF
+          - link "image UP TO 45% OFF" [ref=e1177] [cursor=pointer]:
+            - /url: /search/page-1?q=gadgets%3Arelevance%3Alist%3AlistId_8989ae6f077b42bda42f80caaa428754%3AinStockFlag%3Atrue%3Abrand%3AMBH12B10817%3Abrand%3AMBH12E00002
+            - generic [ref=e1178]:
+              - img "image" [ref=e1180]
+              - generic [ref=e1182]: UP TO 45% OFF
+          - link "image UP TO 40% OFF" [ref=e1184] [cursor=pointer]:
+            - /url: /search?q=gadgets%3Arelevance%3Alist%3AlistId_8989ae6f077b42bda42f80caaa428754%3AinStockFlag%3Atrue%3Abrand%3AMBH12E00008
+            - generic [ref=e1185]:
+              - img "image" [ref=e1187]
+              - generic [ref=e1189]: UP TO 40% OFF
+          - link "image UP TO 65% OFF" [ref=e1191] [cursor=pointer]:
+            - /url: /search/page-1?q=gadgets:relevance:list:listId_8989ae6f077b42bda42f80caaa428754:inStockFlag:true:brand:MBH12B15180:brand:MBH12B10285
+            - generic [ref=e1192]:
+              - img "image" [ref=e1194]
+              - generic [ref=e1196]: UP TO 65% OFF
+          - link "image UP TO 50% OFF" [ref=e1198] [cursor=pointer]:
+            - /url: /search?q=gadgets%3Arelevance%3Alist%3AlistId_8989ae6f077b42bda42f80caaa428754%3AinStockFlag%3Atrue%3Abrand%3AMBH12E00279
+            - generic [ref=e1199]:
+              - img "image" [ref=e1201]
+              - generic [ref=e1203]: UP TO 50% OFF
+      - generic [ref=e1207]:
+        - link "image" [ref=e1210] [cursor=pointer]:
+          - /url: /fraud-call-page?cms=cft
+          - img "image" [ref=e1212]
+        - link "image" [ref=e1215] [cursor=pointer]:
+          - /url: /fraud-call-page?cms=cft
+          - img "image" [ref=e1217]
+        - link "image" [ref=e1220] [cursor=pointer]:
+          - /url: /fraud-call-page?cms=cft
+          - img "image" [ref=e1222]
+    - generic [ref=e1223]:
+      - img "Tata Trust" [ref=e1227]
+      - generic [ref=e1229]:
+        - generic [ref=e1230]:
+          - generic [ref=e1231]:
+            - generic [ref=e1232]: Tata MarketPlace
+            - link "About Us" [ref=e1233] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/aboutus
+            - link "Careers" [ref=e1234] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/careers
+            - link "Terms of Use" [ref=e1235] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/terms-of-use
+            - link "Privacy Policy" [ref=e1236] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/privacy-policy
+            - link "Affiliates" [ref=e1237] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/affiliates
+            - link "Sitemap" [ref=e1238] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/sitemap
+            - link "Blog" [ref=e1239] [cursor=pointer]:
+              - /url: https://blog.tatacliq.com/
+          - generic [ref=e1240]:
+            - generic [ref=e1241]: Customer Service
+            - link "Shopping" [ref=e1242] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/shopping-faq
+            - link "Offers & Promotions" [ref=e1243] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/offers-promotion-faq
+            - link "Payments" [ref=e1244] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/payments-faq
+            - link "Cancellation" [ref=e1245] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/cancellation-faq
+            - link "Returns & Refunds" [ref=e1246] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/returns-faq
+            - link "Returns Policy" [ref=e1247] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/returns-policy
+            - link "Electronics Return Policy" [ref=e1248] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/electronics-return-policy
+            - link "Contact Us" [ref=e1249] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/contactus
+            - link "Reviews Guidelines" [ref=e1250] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/reviews-guidelines
+            - link "Home & Furniture Return Policy" [ref=e1251] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/furniture-return-policy
+            - link "Replacement Policy" [ref=e1252] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/terms/replacement-policy-tnc
+          - generic [ref=e1253]:
+            - generic [ref=e1254]: My Tata CLiQ
+            - link "My Account" [ref=e1255] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/my-account
+            - link "My Orders" [ref=e1256] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/my-account/orders
+            - link "My Shopping Bag" [ref=e1257] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/cart
+            - link "My Wishlist" [ref=e1258] [cursor=pointer]:
+              - /url: https://www.tatacliq.com/wishlist
+        - generic [ref=e1260]:
+          - heading "Tata CLiQ Offerings" [level=1] [ref=e1261]
+          - link "Watches for Men" [ref=e1262] [cursor=pointer]:
+            - /url: /watches-men/c-msh1500
+          - text: "|"
+          - link "Campus Shoes" [ref=e1263] [cursor=pointer]:
+            - /url: /campus/c-mbh13b10665/page-1
+          - text: "|"
+          - link "Sandals for Men" [ref=e1264] [cursor=pointer]:
+            - /url: /men-sandals-floaters/c-msh1311127
+          - text: "|"
+          - link "Sneakers for Men" [ref=e1265] [cursor=pointer]:
+            - /url: /men-sneakers/c-msh1311115
+          - text: "|"
+          - link "Reebok Shoes" [ref=e1266] [cursor=pointer]:
+            - /url: /reebok/c-mbh13a00099
+          - text: "|"
+          - link "Cotton Kurtis" [ref=e1267] [cursor=pointer]:
+            - /url: /womens-clothing-ethnic-wear-kurtis-kurtas/c-msh1012100
+          - text: "|"
+          - link "Woodland Shoes" [ref=e1268] [cursor=pointer]:
+            - /url: /woodland/c-mbh13f00086
+          - text: "|"
+          - link "Jumpsuits" [ref=e1269] [cursor=pointer]:
+            - /url: /womens-clothing-western-wear-jumpsuits/c-msh1016108
+          - text: "|"
+          - link "Allen Solly" [ref=e1270] [cursor=pointer]:
+            - /url: /allen-solly/c-mbh11a00023
+          - text: "|"
+          - link "Sparx Shoes" [ref=e1271] [cursor=pointer]:
+            - /url: /sparx/c-mbh13f00116
+          - text: "|"
+          - link "Gold Rings" [ref=e1272] [cursor=pointer]:
+            - /url: /jewellery-gold-rings/c-msh2012111
+          - text: "|"
+          - link "Formal Shoes for Men" [ref=e1273] [cursor=pointer]:
+            - /url: /men-formal/c-msh1311112
+          - text: "|"
+          - link "Sports Shoes for Men" [ref=e1274] [cursor=pointer]:
+            - /url: /men-sports-shoes/c-msh1311128
+          - text: "|"
+          - link "Wallets for Men" [ref=e1275] [cursor=pointer]:
+            - /url: /accessories-mens-bags-wallets/c-msh1604000
+          - text: "|"
+          - link "Ladies Watches" [ref=e1276] [cursor=pointer]:
+            - /url: /watches-women/c-msh1501
+          - text: "|"
+          - link "Trolley Bags" [ref=e1277] [cursor=pointer]:
+            - /url: /accessories-mens-bags-luggage-trolley/c-msh1604007
+          - text: "|"
+          - link "Handbags for Women" [ref=e1278] [cursor=pointer]:
+            - /url: /accessories-women-bags/c-msh1600
+          - text: "|"
+          - link "Sling Bags for Women" [ref=e1279] [cursor=pointer]:
+            - /url: /accessories-women-bags-sling-bags/c-msh1600000
+          - text: "|"
+          - link "Casual Shoes for Men" [ref=e1280] [cursor=pointer]:
+            - /url: /men-casual/c-msh1311113
+          - text: "|"
+          - link "Boots for Men" [ref=e1281] [cursor=pointer]:
+            - /url: /men-boots/c-msh1311114
+          - text: "|"
+          - link "Digital Watches" [ref=e1282] [cursor=pointer]:
+            - /url: /watches-men-digital/c-msh1500001
+          - text: "|"
+          - link "Sonata Watches" [ref=e1283] [cursor=pointer]:
+            - /url: /sonata/c-mbh15w00181/page-1
+          - text: "|"
+          - link "Sneakers for Women" [ref=e1284] [cursor=pointer]:
+            - /url: /footwear-women-sneakers/c-msh1310115
+          - text: "|"
+          - link "Running Shoes" [ref=e1285] [cursor=pointer]:
+            - /url: /men-sports-shoes-running/c-msh1311128100
+          - text: "|"
+          - link "Puma Shoes" [ref=e1286] [cursor=pointer]:
+            - /url: /puma/c-mbh13a00168
+          - text: "|"
+          - link "Boots for Women" [ref=e1287] [cursor=pointer]:
+            - /url: /footwear-women-boots/c-msh1310114
+          - text: "|"
+          - link "Skechers" [ref=e1288] [cursor=pointer]:
+            - /url: /skechers/c-mbh13f00073
+          - text: "|"
+          - link "Malabargold" [ref=e1289] [cursor=pointer]:
+            - /url: /malabar-gold-and-diamonds/c-mbh19b10147/page-1
+          - text: "|"
+          - link "Fabindia" [ref=e1290] [cursor=pointer]:
+            - /url: /fabindia/c-mbh11a00198
+          - text: "|"
+          - link "Utsa" [ref=e1291] [cursor=pointer]:
+            - /url: /utsa/c-mbh11a00191
+          - text: "|"
+          - link "Vark" [ref=e1292] [cursor=pointer]:
+            - /url: /vark/c-mbh11a00269/page-1
+          - text: "|"
+          - link "Gia" [ref=e1293] [cursor=pointer]:
+            - /url: /gia/c-mbh11a00187/page-1
+          - text: "|"
+          - link "LOV" [ref=e1294] [cursor=pointer]:
+            - /url: /lov/c-mbh11a00177/page-1
+          - text: "|"
+          - link "Sitemap" [ref=e1295] [cursor=pointer]:
+            - /url: /sitemap
+          - text: "|"
+          - link "Mens sports" [ref=e1296] [cursor=pointer]:
+            - /url: /sports-wear/c-msh1118
+          - text: "|"
+          - link "Mens formal" [ref=e1297] [cursor=pointer]:
+            - /url: /formal-wear/c-msh1117
+          - text: "|"
+          - link "Mens casual" [ref=e1298] [cursor=pointer]:
+            - /url: /casual-wear/c-msh1116
+          - text: "|"
+          - link "Mens innerwear" [ref=e1299] [cursor=pointer]:
+            - /url: mens-clothing-inner-nightwear/c-msh1114
+      - generic [ref=e1301]:
+        - generic [ref=e1302]:
+          - generic [ref=e1303]: Download App
+          - link "Download App" [ref=e1304] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.tul.tatacliq
+          - link "Download App" [ref=e1308] [cursor=pointer]:
+            - /url: https://itunes.apple.com/us/app/tata-cliq-online-shopping/id1101619385?ls=1&mt=8
+        - generic [ref=e1312]:
+          - link "Social Media Links" [ref=e1313] [cursor=pointer]:
+            - /url: https://www.facebook.com/TataCLiQ/
+          - link "Social Media Links" [ref=e1317] [cursor=pointer]:
+            - /url: https://x.com/TataCLiQFashion
+          - link "Social Media Links" [ref=e1321] [cursor=pointer]:
+            - /url: https://www.instagram.com/tatacliqfashion/
+          - link "Social Media Links" [ref=e1325] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCUwkaWqIcl9dYQccKkM0VRA
+          - link "Social Media Links" [ref=e1329] [cursor=pointer]:
+            - /url: https://in.linkedin.com/company/tatacliq
+        - generic [ref=e1333]: © 2026 Tata CLiQ | All rights reserved
+      - generic:
+        - heading "Online Fashion & Lifestyle Shopping for Women, Men & Kids in India - Tata CLiQ" [level=2]
+```
